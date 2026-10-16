@@ -6,8 +6,7 @@ Nothing has been uploaded. Work through this list before you publish.
 - [ ] **Necrotic Gnome:** send the question mail (3pp@necroticgnome.com) and wait for the answer. Open points: does the licence cover a Foundry module with backdrops (prohibited content item 10), are AI-generated images acceptable (item 9), may hex numbers and names be used in scene names, how to use the Compatibility Logo.
 - [ ] **Compatibility Logo:** get the logo files from the Dolmenwood Creator Kit (https://necroticgnome.com/products/dolmenwood-creator-kit), put them in `assets/logo/` and mention the logo in NOTICE.md and both READMEs.
 - [ ] **Name:** the credited name is "angband" (LICENSE, LICENSE-IMAGES.md, module.json); change it there if you want another.
-- [ ] **Test in a fresh world** (not your campaign world): install from the zip, first-start dialog, import English and German, change weather, time and season, set a campsite variant, check FXMaster effects and the movement zones.
-- [ ] If you also run the older world scripts (`dolmenwood-wetterfx`), disable that module in the test world. Both would switch the same scenes.
+- [ ] **Test in a fresh world** (not your campaign world): install from the zip, first-start dialog, import English and German, change weather, time and season, switch variants with the dialog macro, the quick macros and /backdrop, check the campfire light and the movement zones.
 - [ ] Look at the notes in the files marked with OWNER: the URLs assume the GitHub name `angband`; change them if the account name differs (the build script takes --repo).
 
 ## GitHub
@@ -22,5 +21,5 @@ Foundry's AI policy does not allow AI-generated images in the official listing. 
 
 ## Known limits
 - Written for Foundry v14 (scene levels). Tested with a mocked Foundry API only, not yet in a real world.
-- The Dolmenwood weather table texts are matched in English and German; other languages fall back to clear weather.
-- Music is not included; the weather scripts do not play audio.
+- The module does no weather automation. The old engine is in git under the tag `weather-engine`; re-add it when the official Dolmenwood system has weather.
+- Music is not included.

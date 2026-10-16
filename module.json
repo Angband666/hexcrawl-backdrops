@@ -1,20 +1,44 @@
 {
   "id": "hexcrawl-backdrops",
   "title": "Hexcrawl Backdrops",
-  "description": "<p>Scene backdrops for hexcrawl play with automatic weather, time-of-day, season and campsite variants. Includes 159 encounter places, one landscape for each of the 200 hexes and 20 fairy road and realm scenes.</p><p><em>Scenes for the Dolmenwood RPG.</em> English and German. All images are AI-generated.</p><p>This is an independent product published under the Dolmenwood Third-Party Licence and is not affiliated with or approved by Necrotic Gnome. Dolmenwood® and all related characters and elements are © Necrotic Gnome and used with permission under licence. Requires the Dolmenwood core books.</p>",
+  "description": "<p>Scene backdrops for hexcrawl play: 159 encounter places, one landscape for each of the 200 hexes and 20 fairy road and realm scenes. Every scene comes with variants for night, dusk, rain and mist, thunderstorm, winter, autumn, spring and campsites, which you switch by macro or chat command.</p><p><em>Scenes for the Dolmenwood RPG.</em> English and German. All images are AI-generated.</p><p>This is an independent product published under the Dolmenwood Third-Party Licence and is not affiliated with or approved by Necrotic Gnome. Dolmenwood® and all related characters and elements are © Necrotic Gnome and used with permission under licence. Requires the Dolmenwood core books.</p>",
   "version": "0.1.0",
-  "authors": [{ "name": "angband" }],
-  "compatibility": { "minimum": "14", "verified": "14.364" },
-  "esmodules": ["scripts/main.mjs"],
+  "authors": [
+    {
+      "name": "angband"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.364"
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
   "languages": [
-    { "lang": "en", "name": "English", "path": "languages/en.json" },
-    { "lang": "de", "name": "Deutsch", "path": "languages/de.json" }
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "languages/de.json"
+    }
   ],
   "relationships": {
-    "systems": [{ "id": "dolmenwood", "type": "system" }],
+    "systems": [
+      {
+        "id": "dolmenwood",
+        "type": "system"
+      }
+    ],
     "recommends": [
-      { "id": "fxmaster", "type": "module" },
-      { "id": "alternate-zone-movement", "type": "module" }
+      {
+        "id": "alternate-zone-movement",
+        "type": "module"
+      }
     ]
   },
   "license": "LICENSE",
