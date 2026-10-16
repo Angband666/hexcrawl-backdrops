@@ -50,5 +50,8 @@
   "HCB.variant.morgen": "Morning",
   "HCB.variant.lager_abend": "Camp at dusk",
   "HCB.variant.lager_nacht": "Camp at night",
-  "HCB.variant.auto": "Automatic (weather and calendar)"
+  "HCB.variant.auto": "Automatic (weather and calendar)",
+  "HCB.warn.noVariant": "This scene has no variant “{variant}”.",
+  "HCB.warn.unknownVariant": "Unknown variant “{word}”. Type /backdrop help.",
+  "HCB.warn.gmOnly": "Only the GM can use /backdrop."
 }

@@ -35,13 +35,17 @@ Der Download ist etwa 870 MB groß. Das Modul in der Welt aktivieren.
 - Die Bilder bleiben im Modulordner, sie werden nicht in deine Welt kopiert.
 
 ## So funktioniert es
-Wird das Wetter gewürfelt (Dolmenwood-Kalender), vergeht Zeit oder öffnest du eine Szene, wechselt der Hintergrund zur passenden Variante. Zuerst entscheidet die Nacht nach Kalenderzeit, dann Wetterbilder (Gewitter, Nebel, Regen, Schnee), dann die Dämmerung, dann die Jahreszeit, zuletzt das normale Tagbild. Lager-Varianten werden nie automatisch gewählt; stelle sie von Hand ein:
+Wird das Wetter gewürfelt (Dolmenwood-Kalender), vergeht Zeit oder öffnest du eine Szene, wechselt der Hintergrund zur passenden Variante. Zuerst entscheidet die Nacht nach Kalenderzeit, dann Wetterbilder (Gewitter, Nebel, Regen, Schnee), dann die Dämmerung, dann die Jahreszeit, zuletzt das normale Tagbild. Lager-Varianten werden nie automatisch gewählt; stelle sie von Hand mit dem Chat-Befehl ein (nur GM):
 
-```js
-game.modules.get("hexcrawl-backdrops").api.chooseVariant()
+```
+/backdrop                 öffnet einen Dialog für die aktuelle Szene
+/backdrop nacht           setzt direkt eine Variante: tag, nacht, dämmerung, regen, gewitter, nebel, winter, herbst, frühling, lager, lagerabend
+/backdrop auto            zurück zu Automatisch
+/backdrop import          öffnet den Import-Dialog
+/backdrop help            listet die Namen auf
 ```
 
-Lege das in ein Skript-Makro. Es öffnet für die aktuelle Szene einen Dialog, in dem du jede Variante wählen oder zu *Automatisch* zurückkehren kannst. Das Lagerfeuerlicht erscheint nur in den Lager-Varianten.
+Das Lagerfeuerlicht erscheint nur in den Lager-Varianten. `/hcb` funktioniert als Kurzform. Dasselbe gibt es als Skript: `game.modules.get("hexcrawl-backdrops").api.chooseVariant()`.
 
 ## Einstellungen
 - Sprache der Szenennamen

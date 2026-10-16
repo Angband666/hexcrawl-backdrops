@@ -35,13 +35,17 @@ When a GM opens a world with the module for the first time, a dialog appears. Ch
 - The images stay in the module folder, they are not copied into your world.
 
 ## How it works
-When the weather is rolled (Dolmenwood calendar), when time passes or when you open a scene, the backdrop switches to the fitting variant. Night is chosen by the calendar time, then weather pictures (storm, mist, rain, snow), then dusk, then the season, then the plain day image. Campsite variants are never chosen automatically; set them by hand:
+When the weather is rolled (Dolmenwood calendar), when time passes or when you open a scene, the backdrop switches to the fitting variant. Night is chosen by the calendar time, then weather pictures (storm, mist, rain, snow), then dusk, then the season, then the plain day image. Campsite variants are never chosen automatically; set them by hand with the chat command (GM only):
 
-```js
-game.modules.get("hexcrawl-backdrops").api.chooseVariant()
+```
+/backdrop                 opens a dialog for the current scene
+/backdrop night           sets a variant directly: day, night, dusk, rain, storm, mist, winter, autumn, spring, camp, campdusk
+/backdrop auto            back to automatic
+/backdrop import          opens the import dialog
+/backdrop help            lists the names
 ```
 
-Put that in a script macro. It opens a dialog for the current scene where you can pick any variant or go back to *Automatic*. The campfire light appears only in the campsite variants.
+The campfire light appears only in the campsite variants. `/hcb` works as a short form. The same is available as a script: `game.modules.get("hexcrawl-backdrops").api.chooseVariant()`.
 
 ## Settings
 - Language of scene names

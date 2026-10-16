@@ -117,7 +117,15 @@ export async function chooseVariant(scene = canvas?.scene) {
     ok: { label: t("HCB.ok"), callback: (ev, button) => button.form.elements.variant.value }
   });
   if (!choice) return;
+  return setVariant(scene, choice);
+}
+
+/** Set a variant by key ("tag", "nacht", ...) or "auto" for the scene. */
+export async function setVariant(scene, choice) {
+  const f = flagOf(scene);
+  if (!f) return ui.notifications.warn(t("HCB.warn.notModuleScene"));
   if (choice === "auto") { await scene.update({ [`flags.${MOD}.scene.manual`]: false }); return apply(scene, true); }
+  if (choice !== "tag" && !f.variants?.[choice]) return ui.notifications.warn(t("HCB.warn.noVariant", { variant: t(`HCB.variant.${choice}`) }));
   await scene.update({ [`flags.${MOD}.scene.manual`]: true, [`flags.${MOD}.scene.current`]: choice });
   const img = choice === "tag" ? f.tag : f.variants[choice];
   const lvl = scene.levels?.contents?.[0];

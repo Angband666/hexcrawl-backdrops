@@ -78,14 +78,14 @@ export async function importPack(pack, { lang, update = false, progress } = {}) 
     if (existing) {
       if (!update) { skipped++; continue; }
       await existing.unsetFlag(MOD, "scene");
-      await existing.update({ name, folder: folder.id, [`flags.${MOD}.scene`]: flag });
+      await existing.update({ name, folder: folder.id, thumb: `${PATH}${rec.thumb}`, [`flags.${MOD}.scene`]: flag });
       await setBackground(existing, base);
       updated++;
     } else {
       const scene = await Scene.create({
         name, folder: folder.id, width: rec.w, height: rec.h, padding: rec.padding,
         grid: { type: rec.grid.type, size: rec.grid.size, distance: rec.grid.distance, units: rec.grid.units },
-        background: { src: base }, tokenVision: false, navigation: false, flags: { [MOD]: { scene: flag } }
+        background: { src: base }, thumb: `${PATH}${rec.thumb}`, tokenVision: false, navigation: false, flags: { [MOD]: { scene: flag } }
       });
       await setBackground(scene, base);
       const regions = regionData(rec, lang, azm);
