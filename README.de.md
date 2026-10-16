@@ -47,8 +47,12 @@ Wird das Wetter gewürfelt (Dolmenwood-Kalender), vergeht Zeit oder öffnest du 
 
 Das Lagerfeuerlicht erscheint nur in den Lager-Varianten. `/hcb` funktioniert als Kurzform. Dasselbe gibt es als Skript: `game.modules.get("hexcrawl-backdrops").api.chooseVariant()`.
 
+## Wetter
+Das Modul nutzt das Wetter des Dolmenwood-Systems, sobald das System eines hat. Hat es keines (oder stellst du *Wetterquelle* auf *Vom GM gewählt*), wählst du das aktuelle Wetter von Hand: `/backdrop weather` öffnet eine Liste, `/backdrop weather regen` setzt es direkt (klar, bewölkt, windig, dunst, nebel, nieselregen, regen, gewitter, schnee, schneesturm), oder nutze *Einstellungen, Hexcrawl Backdrops, Wetter wählen…*. Das Modul würfelt oder erfindet nie ein Wetter. *Aus* nutzt nur Tageszeit und Jahreszeit.
+
 ## Einstellungen
 - Sprache der Szenennamen
+- Wetterquelle (automatisch / vom GM gewählt / aus)
 - Varianten automatisch wechseln (an/aus)
 - FXMaster-Effekte (auf Szenen dieses Moduls / aus)
 - Jahreszeiten-Varianten bei klarem Wetter

@@ -1,6 +1,8 @@
 // Weather engine: picks the backdrop variant of a scene from the Dolmenwood calendar (time of day, season) and the weather table,
 // and switches FXMaster presets. Runs on the active GM only. Works on scenes created by this module (flag hexcrawl-backdrops.scene).
 import { MOD, t } from "./constants.mjs";
+import { calendar } from "./calendar.mjs";
+import { RULE, currentOwn, systemWeatherText } from "./ownweather.mjs";
 
 // Rules: the first matching rule wins. fx = FXMaster preset (null = clear), opts = preset options, bild = preferred variant (null = by season/time).
 // Patterns cover the English weather tables and German weather texts.
@@ -31,13 +33,14 @@ const flagOf = scene => scene?.getFlag(MOD, "scene");
 const ruleFor = text => RULES.find(r => r.re.test(text ?? ""));
 const isInterior = f => !!f?.interior;
 
-let cal = null;
-async function calendar() {
-  if (!cal) { try { cal = await import("/systems/dolmenwood/module/calendar/calendar-time.js"); } catch (e) { cal = {}; } }
-  if (!cal.worldTimeToCalendar) return null;
-  const c = cal.worldTimeToCalendar(game.time.worldTime);
-  const d = cal.getDaylightHours?.(c.monthKey) ?? { sunrise: 6, sunset: 18 };
-  return { season: cal.getSeason?.(c.monthKey), hour: c.hour + c.minute / 60, sunrise: d.sunrise, sunset: d.sunset };
+/** Weather in use: the official Dolmenwood weather (when it exists and the source is "auto"), otherwise the one the GM picked. */
+function effectiveWeather() {
+  const src = game.settings.get(MOD, "weatherSource");
+  if (src === "off") return { rule: null, label: "" };
+  const text = systemWeatherText();
+  if (src === "auto" && text) return { rule: ruleFor(text), label: text };
+  const id = currentOwn();
+  return { rule: RULE[id], label: t(`HCB.weather.${id}`) };
 }
 
 /** Which variant fits? Priority: night > weather picture (storm/mist/rain/winter) > dusk > season > day. */
@@ -80,8 +83,7 @@ export async function apply(scene, force = false) {
   if (!game.user.isActiveGM || !scene || !game.settings.get(MOD, "auto")) return;
   const f = flagOf(scene);
   if (!f) return;
-  const weather = game.settings.get("dolmenwood", "currentWeather") ?? {};
-  const rule = ruleFor(weather.text);
+  const { rule, label } = effectiveWeather();
   const c = await calendar();
   let key = f.current ?? "tag";
   if (!f.manual || force) {
@@ -101,7 +103,7 @@ export async function apply(scene, force = false) {
     const fx = isInterior(f) ? null : (rule?.fx || null);   // no rain indoors
     try { await FXMASTER.api.presets.switch(fx, { scene, silent: true, ...(fx ? (rule.opts ?? {}) : {}) }); } catch (e) { console.warn(`${MOD} | FXMaster`, e); }
   }
-  console.log(`${MOD} | "${weather.text ?? ""}", ${c?.season ?? "?"} ${c ? c.hour.toFixed(1) + "h" : ""} -> ${key} (${scene.name})`);
+  console.log(`${MOD} | "${label}", ${c?.season ?? "?"} ${c ? c.hour.toFixed(1) + "h" : ""} -> ${key} (${scene.name})`);
 }
 
 /** Dialog: set a variant by hand for the current scene (or go back to automatic). */
@@ -139,7 +141,7 @@ export function initWeather() {
     const k = foundry.utils.getProperty(diff, `flags.${MOD}.scene.current`);
     if (k) { syncLights(scene, k); }
   });
-  Hooks.on("updateSetting", setting => { if (setting.key === "dolmenwood.currentWeather") apply(canvas.scene); });
+  Hooks.on("updateSetting", setting => { if (["dolmenwood.currentWeather", `${MOD}.weather`, `${MOD}.weatherSource`].includes(setting.key)) apply(canvas.scene); });
   Hooks.on("canvasReady", canvas => apply(canvas.scene));
   let tmr; Hooks.on("updateWorldTime", () => { clearTimeout(tmr); tmr = setTimeout(() => apply(canvas.scene), 500); });
 }

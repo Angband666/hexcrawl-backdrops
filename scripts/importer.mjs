@@ -98,3 +98,18 @@ export async function importPack(pack, { lang, update = false, progress } = {}) 
   }
   return { created, updated, skipped, total: recs.length };
 }
+
+/** Scenes created through the API have no preview image (black tile). Fill in the missing ones from the module's own thumbnails. */
+export async function repairThumbs() {
+  if (!game.user.isGM) return 0;
+  const data = await loadData();
+  const want = new Map(data.scenes.map(r => [`${r.pack}/${r.id}`, `${PATH}${r.thumb}`]));
+  const ups = [];
+  for (const s of game.scenes) {
+    const f = s.getFlag(MOD, "scene"); if (!f) continue;
+    const thumb = want.get(`${f.pack}/${f.id}`);
+    if (thumb && !s.thumb) ups.push({ _id: s.id, thumb });
+  }
+  for (let i = 0; i < ups.length; i += 40) await Scene.updateDocuments(ups.slice(i, i + 40));
+  return ups.length;
+}

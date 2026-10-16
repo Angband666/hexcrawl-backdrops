@@ -1,6 +1,8 @@
 # Changelog
 
 ## 0.1.0
+- Manual weather: pick the current weather by hand (dialog, settings button, `/backdrop weather`) when the Dolmenwood system has none.
+- Chat command `/backdrop`, preview images for all scenes (set automatically if missing).
 - First version: 159 encounter places, 200 hex scenes, 20 fairy road and realm scenes.
 - Variants for night, dusk, rain and mist, thunderstorm, light mist, winter, autumn, spring and campsites (dusk and night), switched by the Dolmenwood calendar and weather.
 - FXMaster effects, movement zones (with Alternate Zone Movement) and campfire lights.
