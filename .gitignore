@@ -1,0 +1,5 @@
+# The images are published as a release file, not committed to git
+assets/
+dist/
+*.zip
+PUBLISHING_CHECKLIST.local.md
