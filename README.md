@@ -52,7 +52,7 @@ The module uses the weather of the Dolmenwood system when the system has one. If
 
 ## Macros
 On first start (and with *Import* or *Update*) the module creates world macros in the macro folder *Hexcrawl Backdrops*:
-- **Weather…** (opens the weather list, also put on your hotbar) and **Backdrop variant…** (lists every variant the current scene has)
+- **Weather…** (opens the weather list) and **Backdrop variant…** (lists every variant the current scene has). Both are put on your hotbar automatically.
 - folder *Weather*: one quick macro per weather (*Weather: Rain*, …)
 - folder *Backdrop*: one quick macro per backdrop variant: *Automatic*, *Day*, *Night*, *Dusk*, *Autumn*, *Spring*, *Winter*, *Camp at dusk*, *Camp at night*
 

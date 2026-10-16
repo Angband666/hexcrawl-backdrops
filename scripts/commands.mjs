@@ -24,7 +24,7 @@ export async function command(arg) {
   const scene = canvas?.scene;
   if (arg === "help") return ChatMessage.create({ whisper: [game.user.id], speaker: { alias: "Hexcrawl Backdrops" }, content: `<p>/backdrop &nbsp;·&nbsp; /backdrop import &nbsp;·&nbsp; /backdrop macros &nbsp;·&nbsp; /backdrop weather [${IDS.join(" | ")}] &nbsp;·&nbsp; /backdrop &lt;${Object.values(ALIAS).map(a => a[0]).join(" | ")}&gt;</p>` });
   if (arg === "import" || arg === "setup") return openManager();
-  if (arg === "macros" || arg === "makros") { const r = await ensureMacros({ update: true }); return ui.notifications.info(t("HCB.notify.macros", { n: r.created + r.updated })); }
+  if (arg === "macros" || arg === "makros") { const r = await ensureMacros({ update: true, hotbar: true }); return ui.notifications.info(t("HCB.notify.macros", { n: r.created + r.updated })); }
   if (arg === "weather" || arg === "wetter") return chooseWeather();
   const wm = arg.match(/^(?:weather|wetter)\s+(.+)$/);
   if (wm) { const id = wlookup(wm[1]); if (!id) return ui.notifications.warn(t("HCB.warn.unknownWeather", { word: wm[1] })); return setWeather(id); }

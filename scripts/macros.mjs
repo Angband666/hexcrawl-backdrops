@@ -5,7 +5,7 @@
 import { MOD, PATH } from "./constants.mjs";
 import { IDS } from "./ownweather.mjs";
 
-export const MACROS_VERSION = 2;   // raise when macros are added, existing worlds then get the new ones on the next start
+export const MACROS_VERSION = 3;   // raise when macros are added, existing worlds then get the new ones on the next start
 const API = `game.modules.get("${MOD}").api`;
 const WL = { clear: ["Clear", "Klar"], cloudy: ["Cloudy", "Bewölkt"], windy: ["Windy", "Windig"], mist: ["Mist", "Dunst"], fog: ["Fog", "Nebel"],
   drizzle: ["Drizzle", "Nieselregen"], rain: ["Rain", "Regen"], storm: ["Thunderstorm", "Gewitter"], snow: ["Snow", "Schnee"], blizzard: ["Blizzard", "Schneesturm"] };
@@ -27,10 +27,11 @@ export function macroDefs(lang) {
   return defs;
 }
 
+/** Puts a macro on the first free slot of the first hotbar page, unless it is already on the bar. */
 async function toHotbar(macro) {
   try {
     const hb = game.user.hotbar ?? {};
-    if (Object.values(hb).some(id => game.macros.get(id)?.getFlag(MOD, "macro"))) return;
+    if (Object.values(hb).includes(macro.id)) return;
     for (let slot = 1; slot <= 10; slot++) if (!hb[slot]) { await game.user.assignHotbarMacro(macro, slot); return; }
   } catch (e) { console.warn(`${MOD} | hotbar`, e); }
 }
@@ -44,7 +45,7 @@ async function folderFor(key, lang, update) {
 }
 
 /** Creates missing macros; with update=true renames and re-links existing ones to the chosen language. */
-export async function ensureMacros({ lang, update = false } = {}) {
+export async function ensureMacros({ lang, update = false, hotbar = false } = {}) {
   if (!game.user.isGM) return { created: 0, updated: 0 };
   lang ??= game.settings.get(MOD, "language");
   const folders = {};
@@ -52,10 +53,15 @@ export async function ensureMacros({ lang, update = false } = {}) {
   for (const m of macroDefs(lang)) {
     folders[m.folder] ??= await folderFor(m.folder, lang, update);
     const ex = game.macros.find(x => x.getFlag(MOD, "macro") === m.key);
-    if (ex) { if (update) { await ex.update({ name: m.name, img: m.img, command: m.command, folder: folders[m.folder].id }); updated++; } continue; }
+    const bar = m.key === "weather" || m.key === "variant";   // the two dialog macros go on the hotbar
+    if (ex) {
+      if (update) { await ex.update({ name: m.name, img: m.img, command: m.command, folder: folders[m.folder].id }); updated++; }
+      if (hotbar && bar) await toHotbar(ex);
+      continue;
+    }
     const doc = await Macro.create({ name: m.name, type: "script", img: m.img, command: m.command, folder: folders[m.folder].id, flags: { [MOD]: { macro: m.key } } });
     created++;
-    if (m.key === "weather") await toHotbar(doc);
+    if (bar) await toHotbar(doc);
   }
   await game.settings.set(MOD, "macrosVersion", MACROS_VERSION);
   return { created, updated };

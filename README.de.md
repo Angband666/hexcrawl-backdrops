@@ -52,7 +52,7 @@ Das Modul nutzt das Wetter des Dolmenwood-Systems, sobald das System eines hat. 
 
 ## Makros
 Beim ersten Start (und bei *Importieren* oder *Aktualisieren*) legt das Modul Welt-Makros im Makro-Ordner *Hexcrawl Backdrops* an:
-- **Wetter…** (öffnet die Wetterliste, liegt auch auf deiner Makroleiste) und **Bildvariante…** (listet jede Variante der aktuellen Szene)
+- **Wetter…** (öffnet die Wetterliste) und **Bildvariante…** (listet jede Variante der aktuellen Szene). Beide werden automatisch auf deine Makroleiste gelegt.
 - Ordner *Wetter*: je ein Schnellmakro pro Wetter (*Wetter: Regen*, …)
 - Ordner *Bild*: je ein Schnellmakro pro Bildvariante: *Automatisch*, *Tag*, *Nacht*, *Dämmerung*, *Herbst*, *Frühling*, *Winter*, *Lager am Abend*, *Lager bei Nacht*
 

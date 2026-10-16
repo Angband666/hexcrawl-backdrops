@@ -77,5 +77,5 @@
   "HCB.settings.weatherMenu.name": "Wetter",
   "HCB.settings.weatherMenu.label": "Wetter wählen…",
   "HCB.settings.weatherMenu.hint": "Wähle das aktuelle Wetter von Hand. Auch: /backdrop weather",
-  "HCB.notify.macros": "Makros im Ordner „Hexcrawl Backdrops“ bereit: {n}. Das Wetter-Makro liegt auf deiner Leiste."
+  "HCB.notify.macros": "Makros im Ordner „Hexcrawl Backdrops“ bereit. „Wetter…“ und „Bildvariante…“ liegen auf deiner Leiste."
 }

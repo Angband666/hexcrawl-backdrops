@@ -16,6 +16,6 @@ Hooks.once("ready", () => {
   console.log(`${MOD} | chat command /backdrop registered via ${registerChatCommand()}`);
   repairThumbs().then(n => { if (n) console.log(`${MOD} | preview images set for ${n} scenes`); }).catch(e => console.warn(`${MOD} | thumbnails`, e));
   if (game.user.isGM && game.settings.get(MOD, "macrosVersion") < MACROS_VERSION && game.settings.get(MOD, "setupDone"))
-    ensureMacros().then(r => ui.notifications.info(t("HCB.notify.macros", { n: r.created }))).catch(e => console.warn(`${MOD} | macros`, e));
+    ensureMacros({ hotbar: true }).then(r => ui.notifications.info(t("HCB.notify.macros", { n: r.created }))).catch(e => console.warn(`${MOD} | macros`, e));
   if (game.user.isGM && !game.settings.get(MOD, "setupDone")) openManager({ firstRun: true });
 });
