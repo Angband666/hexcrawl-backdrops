@@ -45,7 +45,7 @@ When the weather is rolled (Dolmenwood calendar), when time passes or when you o
 /backdrop help            lists the names
 ```
 
-The campfire light appears only in the campsite variants. `/hcb` works as a short form. The same is available as a script: `game.modules.get("hexcrawl-backdrops").api.chooseVariant()`.
+The campfire light appears only in the campsite variants. `/hcb` works as a short form. Type the commands into the Foundry chat (GM only). The same is available as a script: `game.modules.get("hexcrawl-backdrops").api.chooseVariant()`.
 
 ## Weather
 The module uses the weather of the Dolmenwood system when the system has one. If it has none (or you set *Weather source* to *Chosen by the GM*), you pick the current weather by hand: `/backdrop weather` opens a list, `/backdrop weather rain` sets it directly (clear, cloudy, windy, mist, fog, drizzle, rain, storm, snow, blizzard), or use *Settings, Hexcrawl Backdrops, Choose weather…*. The module never rolls or invents weather. *Off* uses only time of day and season.
