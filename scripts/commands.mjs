@@ -2,6 +2,7 @@ import { MOD, t } from "./constants.mjs";
 import { openManager } from "./manager.mjs";
 import { chooseVariant, setVariant } from "./weather.mjs";
 import { IDS, chooseWeather, setWeather } from "./ownweather.mjs";
+import { ensureMacros } from "./macros.mjs";
 
 // Chat command:  /backdrop            choose a variant for the current scene (dialog)
 //                /backdrop <name>     set it directly, e.g. night, dusk, rain, storm, mist, winter, autumn, spring, camp, auto
@@ -21,11 +22,12 @@ function lookup(word) { word = word.replace(/\s+/g, "").toLowerCase(); return Ob
 
 export async function command(arg) {
   const scene = canvas?.scene;
-  if (arg === "help") return ChatMessage.create({ whisper: [game.user.id], speaker: { alias: "Hexcrawl Backdrops" }, content: `<p>/backdrop &nbsp;·&nbsp; /backdrop import &nbsp;·&nbsp; /backdrop weather [${IDS.join(" | ")}] &nbsp;·&nbsp; /backdrop &lt;${Object.values(ALIAS).map(a => a[0]).join(" | ")}&gt;</p>` });
+  if (arg === "help") return ChatMessage.create({ whisper: [game.user.id], speaker: { alias: "Hexcrawl Backdrops" }, content: `<p>/backdrop &nbsp;·&nbsp; /backdrop import &nbsp;·&nbsp; /backdrop macros &nbsp;·&nbsp; /backdrop weather [${IDS.join(" | ")}] &nbsp;·&nbsp; /backdrop &lt;${Object.values(ALIAS).map(a => a[0]).join(" | ")}&gt;</p>` });
   if (arg === "import" || arg === "setup") return openManager();
+  if (arg === "macros" || arg === "makros") { const r = await ensureMacros({ update: true }); return ui.notifications.info(t("HCB.notify.macros", { n: r.created + r.updated })); }
   if (arg === "weather" || arg === "wetter") return chooseWeather();
   const wm = arg.match(/^(?:weather|wetter)\s+(.+)$/);
-  if (wm) { const id = wlookup(wm[1]); if (!id) return ui.notifications.warn(t("HCB.warn.unknownWeather", { word: wm[1] })); await setWeather(id); return ui.notifications.info(t("HCB.weather.set", { weather: t(`HCB.weather.${id}`) })); }
+  if (wm) { const id = wlookup(wm[1]); if (!id) return ui.notifications.warn(t("HCB.warn.unknownWeather", { word: wm[1] })); return setWeather(id); }
   if (!arg) return chooseVariant(scene);
   const key = lookup(arg);
   if (!key) return ui.notifications.warn(t("HCB.warn.unknownVariant", { word: arg }));

@@ -1,6 +1,7 @@
 # Changelog
 
 ## 0.1.0
+- World macros: Weather…, Backdrop variant… and one quick macro per weather, created automatically (`/backdrop macros`).
 - Manual weather: pick the current weather by hand (dialog, settings button, `/backdrop weather`) when the Dolmenwood system has none.
 - Chat command `/backdrop`, preview images for all scenes (set automatically if missing).
 - First version: 159 encounter places, 200 hex scenes, 20 fairy road and realm scenes.

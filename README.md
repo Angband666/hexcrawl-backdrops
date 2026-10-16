@@ -50,6 +50,9 @@ The campfire light appears only in the campsite variants. `/hcb` works as a shor
 ## Weather
 The module uses the weather of the Dolmenwood system when the system has one. If it has none (or you set *Weather source* to *Chosen by the GM*), you pick the current weather by hand: `/backdrop weather` opens a list, `/backdrop weather rain` sets it directly (clear, cloudy, windy, mist, fog, drizzle, rain, storm, snow, blizzard), or use *Settings, Hexcrawl Backdrops, Choose weather…*. The module never rolls or invents weather. *Off* uses only time of day and season.
 
+## Macros
+On first start (and with *Import* or *Update*) the module creates world macros in the macro folder *Hexcrawl Backdrops*: **Weather…** (opens the weather list, it is also put on your hotbar), **Backdrop variant…**, and one quick macro per weather (*Weather: Rain*, …) that you can drag to the hotbar. `/backdrop macros` creates missing ones and renames existing ones to the chosen language.
+
 ## Settings
 - Language of scene names
 - Weather source (automatic / chosen by the GM / off)

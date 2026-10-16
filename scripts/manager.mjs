@@ -1,6 +1,7 @@
 // Import dialog: language (English/Deutsch) and which packs to import. Opens automatically on the first start of a world.
 import { MOD, PACKS, t } from "./constants.mjs";
 import { importPack, packStatus } from "./importer.mjs";
+import { ensureMacros } from "./macros.mjs";
 
 let open = false;
 
@@ -38,6 +39,7 @@ export async function openManager({ firstRun = false } = {}) {
     if (!choice) return;
     await game.settings.set(MOD, "language", choice.lang);
     await game.settings.set(MOD, "setupDone", true);
+    try { await ensureMacros({ lang: choice.lang, update: choice.update }); } catch (e) { console.warn(`${MOD} | macros`, e); }
     if (!choice.packs.length) return;
     ui.notifications.info(t("HCB.notify.start"));
     const lines = [];

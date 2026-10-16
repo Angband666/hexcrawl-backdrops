@@ -21,6 +21,7 @@ export function systemWeatherActive() {
 export async function setWeather(id) {
   if (!game.user.isGM) return;
   await game.settings.set(MOD, "weather", { id });
+  ui.notifications.info(t("HCB.weather.set", { weather: t(`HCB.weather.${id}`) }));
   if (systemWeatherActive()) ui.notifications.warn(t("HCB.warn.systemWeather"));
 }
 

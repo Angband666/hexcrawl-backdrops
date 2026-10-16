@@ -50,6 +50,9 @@ Das Lagerfeuerlicht erscheint nur in den Lager-Varianten. `/hcb` funktioniert al
 ## Wetter
 Das Modul nutzt das Wetter des Dolmenwood-Systems, sobald das System eines hat. Hat es keines (oder stellst du *Wetterquelle* auf *Vom GM gewählt*), wählst du das aktuelle Wetter von Hand: `/backdrop weather` öffnet eine Liste, `/backdrop weather regen` setzt es direkt (klar, bewölkt, windig, dunst, nebel, nieselregen, regen, gewitter, schnee, schneesturm), oder nutze *Einstellungen, Hexcrawl Backdrops, Wetter wählen…*. Das Modul würfelt oder erfindet nie ein Wetter. *Aus* nutzt nur Tageszeit und Jahreszeit.
 
+## Makros
+Beim ersten Start (und bei *Importieren* oder *Aktualisieren*) legt das Modul Welt-Makros im Makro-Ordner *Hexcrawl Backdrops* an: **Wetter…** (öffnet die Wetterliste, es wird auch auf deine Makroleiste gelegt), **Bildvariante…** und je ein Schnellmakro pro Wetter (*Wetter: Regen*, …), die du auf die Leiste ziehen kannst. `/backdrop macros` legt fehlende an und benennt vorhandene in die gewählte Sprache um.
+
 ## Einstellungen
 - Sprache der Szenennamen
 - Wetterquelle (automatisch / vom GM gewählt / aus)

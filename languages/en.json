@@ -76,5 +76,6 @@
   "HCB.settings.weatherSource.off": "Off (time and season only)",
   "HCB.settings.weatherMenu.name": "Weather",
   "HCB.settings.weatherMenu.label": "Choose weather…",
-  "HCB.settings.weatherMenu.hint": "Pick the current weather by hand. Also: /backdrop weather"
+  "HCB.settings.weatherMenu.hint": "Pick the current weather by hand. Also: /backdrop weather",
+  "HCB.notify.macros": "Macros ready in the folder “Hexcrawl Backdrops”: {n}. The weather macro is on your hotbar."
 }

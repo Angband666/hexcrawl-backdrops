@@ -35,6 +35,7 @@ export function registerSettings() {
     choices: { auto: "HCB.settings.weatherSource.auto", module: "HCB.settings.weatherSource.module", off: "HCB.settings.weatherSource.off" }
   });
   game.settings.register(MOD, "weather", { scope: "world", config: false, type: Object, default: {} });
+  game.settings.register(MOD, "macrosDone", { scope: "world", config: false, type: Boolean, default: false });
   game.settings.register(MOD, "setupDone", { scope: "world", config: false, type: Boolean, default: false });
   game.settings.registerMenu(MOD, "manager", {
     name: "HCB.settings.manager.name", label: "HCB.settings.manager.label", hint: "HCB.settings.manager.hint",
