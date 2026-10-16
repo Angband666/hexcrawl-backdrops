@@ -51,7 +51,12 @@ Das Lagerfeuerlicht erscheint nur in den Lager-Varianten. `/hcb` funktioniert al
 Das Modul nutzt das Wetter des Dolmenwood-Systems, sobald das System eines hat. Hat es keines (oder stellst du *Wetterquelle* auf *Vom GM gewählt*), wählst du das aktuelle Wetter von Hand: `/backdrop weather` öffnet eine Liste, `/backdrop weather regen` setzt es direkt (klar, bewölkt, windig, dunst, nebel, nieselregen, regen, gewitter, schnee, schneesturm), oder nutze *Einstellungen, Hexcrawl Backdrops, Wetter wählen…*. Das Modul würfelt oder erfindet nie ein Wetter. *Aus* nutzt nur Tageszeit und Jahreszeit.
 
 ## Makros
-Beim ersten Start (und bei *Importieren* oder *Aktualisieren*) legt das Modul Welt-Makros im Makro-Ordner *Hexcrawl Backdrops* an: **Wetter…** (öffnet die Wetterliste, es wird auch auf deine Makroleiste gelegt), **Bildvariante…** und je ein Schnellmakro pro Wetter (*Wetter: Regen*, …), die du auf die Leiste ziehen kannst. `/backdrop macros` legt fehlende an und benennt vorhandene in die gewählte Sprache um.
+Beim ersten Start (und bei *Importieren* oder *Aktualisieren*) legt das Modul Welt-Makros im Makro-Ordner *Hexcrawl Backdrops* an:
+- **Wetter…** (öffnet die Wetterliste, liegt auch auf deiner Makroleiste) und **Bildvariante…** (listet jede Variante der aktuellen Szene)
+- Ordner *Wetter*: je ein Schnellmakro pro Wetter (*Wetter: Regen*, …)
+- Ordner *Bild*: je ein Schnellmakro pro Bildvariante: *Automatisch*, *Tag*, *Nacht*, *Dämmerung*, *Herbst*, *Frühling*, *Winter*, *Lager am Abend*, *Lager bei Nacht*
+
+Eine von Hand gesetzte Variante bleibt, bis du wieder *Automatisch* wählst. `/backdrop macros` legt fehlende Makros an und benennt vorhandene in die gewählte Sprache um. Welten, die schon Makros haben, bekommen neu hinzugekommene beim nächsten Start.
 
 ## Einstellungen
 - Sprache der Szenennamen
