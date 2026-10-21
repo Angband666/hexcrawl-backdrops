@@ -1,6 +1,6 @@
 # Publishing checklist (not part of the module zip)
 
-Nothing has been uploaded yet. State: 2026-10-21.
+Pushed to the private repo Angband666/hexcrawl-backdrops and draft release v0.1.0 (2026-10-21). Nothing is public yet.
 
 ## Done
 - [x] **Necrotic Gnome answered** (Rachel, Customer Support, reply to the mail of 2026-10-15; kept in `PUBLISHING_CHECKLIST.local.md`, not in git):

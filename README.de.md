@@ -14,8 +14,11 @@ Hintergründe für Hexcrawls in Foundry VTT. Jede Szene hat Varianten für Tages
 
 Es ändert Wetter, Zeit oder Effekte nicht von selbst: Du wählst die Variante.
 
+## Warum es das gibt
+Ich habe diese Szenen für meine eigene Dolmenwood-Kampagne gemacht. Vielleicht helfen sie auch anderen Spielleitern, deshalb teile ich sie kostenlos. Einige der KI-Bilder sind nicht perfekt. Damit muss man leben: Passt ein Bild nicht, nimmt man einfach ein anderes. Es geht um eine gute Auswahl an Hintergründen, nicht um Perfektionismus.
+
 ## KI-Hinweis: So sind die Bilder entstanden
-**Alle Bilder in diesem Modul sind KI-generiert.** Sie wurden lokal auf dem eigenen Computer des Autors mit offenen Bildmodellen erzeugt (vor allem FLUX.2 klein 4B von Black Forest Labs, Apache 2.0), anhand eigener schriftlicher Szenenbeschreibungen. Der Autor hat die Bilder ausgewählt, geprüft und, wenn ein Bild nicht zum Ort passte, neu erzeugt oder bearbeitet. Es wurden keine offiziellen Dolmenwood-Bilder, -Karten oder -Texte als Eingabe oder Vorlage benutzt, und kein Modell wurde mit Dolmenwood-Material trainiert oder nachtrainiert. Das Modul enthält keine Musik und keine Texte aus den Büchern. Einzelheiten: LICENSE-IMAGES.md.
+**Alle Bilder in diesem Modul sind KI-generiert.** Ich habe jedes Bild lokal auf meinem eigenen Computer mit FLUX.2 klein 4B (Black Forest Labs, Apache 2.0) erzeugt, anhand meiner eigenen schriftlichen Szenenbeschreibungen. Ich habe die Bilder ausgewählt und geprüft und, wenn eines nicht zum Ort passte, neu erzeugt oder bearbeitet. Ich habe keine offiziellen Dolmenwood-Bilder, -Karten oder -Texte als Eingabe oder Vorlage benutzt, und kein Modell wurde mit Dolmenwood-Material trainiert oder nachtrainiert. Das Modul enthält keine Musik und keine Texte aus den Büchern. Einzelheiten: LICENSE-IMAGES.md.
 
 ## Voraussetzungen
 - Foundry VTT v14
