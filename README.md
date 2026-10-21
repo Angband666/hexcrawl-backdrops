@@ -20,6 +20,13 @@ I made these scenes for my own Dolmenwood campaign. Other game masters may find 
 ## AI disclosure: how the images were made
 **All images in this module are AI-generated.** I made every image locally on my own computer with FLUX.2 klein 4B (Black Forest Labs, Apache 2.0), from my own written scene descriptions. I picked and checked the images and regenerated or edited them where they did not fit the place. I used no official Dolmenwood artwork, maps or text as input or reference, and no model was trained or fine-tuned on Dolmenwood material. The module contains no music and no text from the books. Details: LICENSE-IMAGES.md.
 
+## Preview
+A few scenes and their variants (night, dusk, rain, storm, winter, autumn):
+
+![Encounter locations](docs/preview-encounters.jpg)
+
+![Hex landscapes](docs/preview-hexes.jpg)
+
 ## Requirements
 - Foundry VTT v14
 - The Dolmenwood core books
