@@ -4,6 +4,8 @@
 
 *Scenes for the Dolmenwood RPG.* [Deutsche Anleitung: README.de.md](README.de.md)
 
+> ☕ **This module is and stays free.** If it helps your game and you feel like it, you can [buy me a coffee](https://buymeacoffee.com/angband). That is entirely voluntary and nothing in the module depends on it.
+
 Backdrops for hexcrawl play in Foundry VTT. Every scene comes with variants for time of day, weather, season and campsite, which you switch by hand.
 
 - **159 encounter places**: forest, bog and water, settlements, inns and interiors, dungeons and campsites
