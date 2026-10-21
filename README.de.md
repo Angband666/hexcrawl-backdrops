@@ -10,7 +10,10 @@ Hintergründe für Hexcrawls in Foundry VTT. Jede Szene hat Varianten für Tages
 - **Varianten**: Nacht, Dämmerung, Regen und Nebel, Gewitter, leichter Nebel, Winter, Herbst, Frühling sowie Lager am Abend und bei Nacht (Innenräume: Nacht, Sturmnacht, Morgen)
 - **Sprachen**: Szenen- und Ordnernamen auf Deutsch oder Englisch, gewählt beim Import.
 
-Alle Bilder sind KI-generiert (siehe LICENSE-IMAGES.md). Das Modul enthält keine Musik und keine Texte aus den Büchern. Es ändert Wetter, Zeit oder Effekte nicht von selbst: Du wählst die Variante.
+Es ändert Wetter, Zeit oder Effekte nicht von selbst: Du wählst die Variante.
+
+## KI-Hinweis: So sind die Bilder entstanden
+**Alle Bilder in diesem Modul sind KI-generiert.** Sie wurden lokal auf dem eigenen Computer des Autors mit offenen Bildmodellen erzeugt (vor allem FLUX.2 klein 4B von Black Forest Labs, Apache 2.0), anhand eigener schriftlicher Szenenbeschreibungen. Der Autor hat die Bilder ausgewählt, geprüft und, wenn ein Bild nicht zum Ort passte, neu erzeugt oder bearbeitet. Es wurden keine offiziellen Dolmenwood-Bilder, -Karten oder -Texte als Eingabe oder Vorlage benutzt, und kein Modell wurde mit Dolmenwood-Material trainiert oder nachtrainiert. Das Modul enthält keine Musik und keine Texte aus den Büchern. Einzelheiten: LICENSE-IMAGES.md.
 
 ## Voraussetzungen
 - Foundry VTT v14
@@ -63,4 +66,8 @@ Der Download ist etwa 870 MB groß. Das Modul in der Welt aktivieren.
 ## Urheber und rechtliche Hinweise
 Code: MIT, siehe LICENSE. Bilder: CC BY-NC 4.0, siehe LICENSE-IMAGES.md. Erstellt mit FLUX.2 klein 4B.
 
+Dolmenwood wird von Necrotic Gnome veröffentlicht: https://necroticgnome.com
+
 This is an independent product published under the Dolmenwood Third-Party Licence and is not affiliated with or approved by Necrotic Gnome. Dolmenwood® and all related characters and elements are © Necrotic Gnome and used with permission under licence. Requires the Dolmenwood core books.
+
+Dolmenwood-Compatible-Product-Logo: siehe NOTICE.md.

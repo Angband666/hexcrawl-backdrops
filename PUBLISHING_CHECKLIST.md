@@ -1,25 +1,32 @@
 # Publishing checklist (not part of the module zip)
 
-Nothing has been uploaded. Work through this list before you publish.
+Nothing has been uploaded yet. State: 2026-10-21.
 
-## Before anything goes online
-- [ ] **Necrotic Gnome:** send the question mail (3pp@necroticgnome.com) and wait for the answer. Open points: does the licence cover a Foundry module with backdrops (prohibited content item 10), are AI-generated images acceptable (item 9), may hex numbers and names be used in scene names, how to use the Compatibility Logo.
-- [ ] **Compatibility Logo:** get the logo files from the Dolmenwood Creator Kit (https://necroticgnome.com/products/dolmenwood-creator-kit), put them in `assets/logo/` and mention the logo in NOTICE.md and both READMEs.
-- [ ] **Name:** the credited name is "angband" (LICENSE, LICENSE-IMAGES.md, module.json); change it there if you want another.
-- [ ] **Test in a fresh world** (not your campaign world): install from the zip, first-start dialog, import English and German, change weather, time and season, switch variants with the dialog macro, the quick macros and /backdrop, check the campfire light and the movement zones.
-- [ ] Look at the notes in the files marked with OWNER: the URLs assume the GitHub name `angband`; change them if the account name differs (the build script takes --repo).
+## Done
+- [x] **Necrotic Gnome answered** (Rachel, Customer Support, reply to the mail of 2026-10-15; kept in `PUBLISHING_CHECKLIST.local.md`, not in git):
+  - Foundry module: you may publish it; the licence will be updated when the official Dolmenwood system for Foundry is out.
+  - AI art is not prohibited; each publisher decides. Recommended: be open about the process, use AI tags where they exist, say so in the product description. (Done: README, module.json, release notes.)
+  - Hex numbers and location names in scene names: fine ("Referencing the Dolmenwood Property").
+  - Compatibility logo: put it on a legal or product page. (NOTICE.md and both READMEs.)
+  - README links to your hosting place and to necroticgnome.com: fine.
+- [x] AI disclosure added to README.md, README.de.md, module.json, LICENSE-IMAGES.md, RELEASE_NOTES.md.
+- [x] Credited name is "angband" (LICENSE, LICENSE-IMAGES.md, module.json).
+- [x] Release build tested locally (`dist/`).
 
-## GitHub
-1. Create a repository (private while testing, public only after Necrotic Gnome answered) `hexcrawl-backdrops`. Commit everything except `assets/` and `dist/` (see .gitignore).
-2. `python tools/build_release.py --repo angband/hexcrawl-backdrops --version 0.1.0`
-3. Create a release `v0.1.0` and attach `dist/hexcrawl-backdrops.zip` and `dist/module.json`. A single release file may be up to 2 GB; the zip is about 870 MB.
-4. Install in Foundry with the manifest URL `https://github.com/angband/hexcrawl-backdrops/releases/latest/download/module.json`.
-5. Tell Necrotic Gnome (3pp@necroticgnome.com) and send them a copy, as the licence asks.
+## Still open
+- [ ] **Compatibility Logo:** download it from the Dolmenwood Creator Kit (https://necroticgnome.com/products/dolmenwood-creator-kit), put the files in `logo/` (the build script includes this folder), then add `![Dolmenwood Compatible Product](logo/<file>)` to NOTICE.md and both READMEs, and rebuild.
+- [ ] **GitHub:** create the account/repository `angband/hexcrawl-backdrops` (private while preparing, public when you publish). Suggested description: "Scene backdrops for hexcrawl play in Foundry VTT (AI-generated images, free, non-commercial)". Suggested topics: foundry-vtt, foundry-module, dolmenwood, ai-generated, battlemap.
+- [ ] **Test in a fresh Foundry world** with the final zip: first-start dialog, import English and German, variants via dialog macro, quick macros and /backdrop, campfire light, movement zones.
+- [ ] **Publish** (needs your OK each time): `git remote add origin ...`, `git push -u origin main`, then `python tools/build_release.py --repo angband/hexcrawl-backdrops --version 0.1.0`, create release `v0.1.0`, paste RELEASE_NOTES.md as the description, attach `dist/hexcrawl-backdrops.zip` (about 870 MB, limit 2 GB) and `dist/module.json`.
+- [ ] Install test with the manifest URL.
+- [ ] Mail Necrotic Gnome (3pp@necroticgnome.com): link to the release, as the licence asks to share a copy; offer the zip.
+- [ ] Ask Necrotic Gnome separately about the atmosphere videos if they use Dolmenwood names (not asked yet).
 
 ## Not in the Foundry package list
 Foundry's AI policy does not allow AI-generated images in the official listing. Distribution works through the manifest URL only.
 
 ## Known limits
-- Written for Foundry v14 (scene levels). Tested with a mocked Foundry API only, not yet in a real world.
+- Written for Foundry v14 (scene levels).
 - The module does no weather automation. The old engine is in git under the tag `weather-engine`; re-add it when the official Dolmenwood system has weather.
+- Do not enable the old world module `dolmenwood-wetterfx` together with this module in one world.
 - Music is not included.

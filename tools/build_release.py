@@ -13,12 +13,12 @@ m['manifest'] = base + '/releases/latest/download/module.json'
 m['download'] = base + f'/releases/download/v{m["version"]}/{m["id"]}.zip'
 (ROOT / 'dist').mkdir(exist_ok=True)
 (ROOT / 'dist' / 'module.json').write_text(json.dumps(m, ensure_ascii=False, indent=2), encoding='utf-8')
-INCLUDE = ['languages', 'scripts', 'data', 'assets']; FILES = ['LICENSE', 'LICENSE-IMAGES.md', 'NOTICE.md', 'README.md', 'README.de.md', 'CHANGELOG.md']
+INCLUDE = ['languages', 'scripts', 'data', 'logo', 'assets']; FILES = ['LICENSE', 'LICENSE-IMAGES.md', 'NOTICE.md', 'README.md', 'README.de.md', 'CHANGELOG.md']
 zp = ROOT / 'dist' / f'{m["id"]}.zip'; n = 0
 with zipfile.ZipFile(zp, 'w', zipfile.ZIP_STORED) as z:
     z.writestr('module.json', json.dumps(m, ensure_ascii=False, indent=2))
     for f in FILES: z.write(ROOT / f, f)
     for d in INCLUDE:
-        for p in sorted((ROOT / d).rglob('*')):
+        for p in sorted((ROOT / d).rglob('*')) if (ROOT / d).is_dir() else []:
             if p.is_file(): z.write(p, p.relative_to(ROOT).as_posix()); n += 1
 print(f'{zp.name}: {n} files, {zp.stat().st_size / 1e6:.0f} MB; manifest {m["manifest"]}')

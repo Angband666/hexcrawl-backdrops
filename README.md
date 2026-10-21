@@ -10,7 +10,10 @@ Backdrops for hexcrawl play in Foundry VTT. Every scene comes with variants for 
 - **Variants**: night, dusk, rain and mist, thunderstorm, light mist, winter, autumn, spring, and campsites at dusk and at night (interiors: night, stormy night, morning)
 - **Languages**: scene and folder names in English or German, chosen when you import.
 
-All images are AI-generated (see LICENSE-IMAGES.md). The module contains no music and no text from the books. It does not change weather, time or effects by itself: you pick the variant.
+It does not change weather, time or effects by itself: you pick the variant.
+
+## AI disclosure: how the images were made
+**All images in this module are AI-generated.** They were made locally on the author's own computer with open image models (mainly FLUX.2 klein 4B by Black Forest Labs, Apache 2.0), from the author's own written scene descriptions. The author picked, checked and, where an image did not fit the place, regenerated or edited it. No official Dolmenwood artwork, maps or text were used as an input or reference, and no model was trained or fine-tuned on Dolmenwood material. The module contains no music and no text from the books. Details: LICENSE-IMAGES.md.
 
 ## Requirements
 - Foundry VTT v14
@@ -63,4 +66,8 @@ Open a scene of the module and pick a variant:
 ## Credits and legal
 Code: MIT, see LICENSE. Images: CC BY-NC 4.0, see LICENSE-IMAGES.md. Made with FLUX.2 klein 4B.
 
+Dolmenwood is published by Necrotic Gnome: https://necroticgnome.com
+
 This is an independent product published under the Dolmenwood Third-Party Licence and is not affiliated with or approved by Necrotic Gnome. Dolmenwood® and all related characters and elements are © Necrotic Gnome and used with permission under licence. Requires the Dolmenwood core books.
+
+Dolmenwood Compatible Product logo: see NOTICE.md.

@@ -1,7 +1,7 @@
 {
   "id": "hexcrawl-backdrops",
   "title": "Hexcrawl Backdrops",
-  "description": "<p>Scene backdrops for hexcrawl play: 159 encounter places, one landscape for each of the 200 hexes and 20 fairy road and realm scenes. Every scene comes with variants for night, dusk, rain and mist, thunderstorm, winter, autumn, spring and campsites, which you switch by macro or chat command.</p><p><em>Scenes for the Dolmenwood RPG.</em> English and German. All images are AI-generated.</p><p>This is an independent product published under the Dolmenwood Third-Party Licence and is not affiliated with or approved by Necrotic Gnome. Dolmenwood® and all related characters and elements are © Necrotic Gnome and used with permission under licence. Requires the Dolmenwood core books.</p>",
+  "description": "<p>Scene backdrops for hexcrawl play: 159 encounter places, one landscape for each of the 200 hexes and 20 fairy road and realm scenes. Every scene comes with variants for night, dusk, rain and mist, thunderstorm, winter, autumn, spring and campsites, which you switch by macro or chat command.</p><p><em>Scenes for the Dolmenwood RPG.</em> English and German.</p><p><strong>AI disclosure:</strong> all images are AI-generated, made locally with open image models (mainly FLUX.2 klein 4B) from the author's own scene descriptions. No official Dolmenwood art, maps or text were used as input or reference.</p><p>This is an independent product published under the Dolmenwood Third-Party Licence and is not affiliated with or approved by Necrotic Gnome. Dolmenwood® and all related characters and elements are © Necrotic Gnome and used with permission under licence. Requires the Dolmenwood core books.</p>",
   "version": "0.1.0",
   "authors": [
     {
