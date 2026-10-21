@@ -6,6 +6,8 @@
 
 > ☕ **This module is and stays free.** If it helps your game and you feel like it, you can [buy me a coffee](https://buymeacoffee.com/angband). That is entirely voluntary and nothing in the module depends on it.
 
+[![Buy me a coffee](docs/bmc-button.svg)](https://buymeacoffee.com/angband)
+
 Backdrops for hexcrawl play in Foundry VTT. Every scene comes with variants for time of day, weather, season and campsite, which you switch by hand.
 
 - **159 encounter places**: forest, bog and water, settlements, inns and interiors, dungeons and campsites

@@ -6,6 +6,8 @@
 
 > ☕ **Dieses Modul ist und bleibt kostenlos.** Wenn es deinem Spiel hilft und du magst, kannst du mir [einen Kaffee spendieren](https://buymeacoffee.com/angband). Das ist völlig freiwillig, und das Modul hängt in keiner Weise davon ab.
 
+[![Buy me a coffee](docs/bmc-button.svg)](https://buymeacoffee.com/angband)
+
 Hintergründe für Hexcrawls in Foundry VTT. Jede Szene hat Varianten für Tageszeit, Wetter, Jahreszeit und Lager, die du von Hand umschaltest.
 
 - **159 Begegnungsorte**: Wald, Moor und Wasser, Siedlungen, Gasthäuser und Innenräume, Dungeons und Lagerplätze
