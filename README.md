@@ -5,8 +5,7 @@
 *Scenes for the Dolmenwood RPG.* [Deutsche Anleitung: README.de.md](README.de.md)
 
 > ☕ **This module is and stays free.** If it helps your game and you feel like it, you can [buy me a coffee](https://buymeacoffee.com/angband). That is entirely voluntary and nothing in the module depends on it.
-
-<a href="https://buymeacoffee.com/angband"><img src="docs/bmc-button.svg" alt="Buy me a coffee" width="150"></a>
+><a href="https://buymeacoffee.com/angband"><img src="docs/bmc-button.svg" alt="Buy me a coffee" width="150"></a>
 
 Backdrops for hexcrawl play in Foundry VTT. Every scene comes with variants for time of day, weather, season and campsite, which you switch by hand.
 
