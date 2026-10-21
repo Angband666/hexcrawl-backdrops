@@ -4,7 +4,9 @@ This is an independent product published under the Dolmenwood Third-Party Licenc
 
 Requires the Dolmenwood core books.
 
-Dolmenwood Compatible Product logo: *(to be added from the Dolmenwood Creator Kit before publication; file goes to `logo/`)*
+![Dolmenwood Compatible Product](logo/Dolmenwood_Compatibility_Logo_Black_On_White.png)
+
+Dolmenwood Compatible Product logo (from the Dolmenwood Creator Kit). A white-on-black version is in `logo/`.
 
 Dolmenwood names appear only as scene names (hex numbers and the names of fairy roads and fairy realms). No text or artwork from the Dolmenwood books is included in this module.
 

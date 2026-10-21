@@ -7,7 +7,7 @@
 ## Install
 In Foundry: Add-on Modules, Install Module, manifest URL:
 
-    https://github.com/angband/hexcrawl-backdrops/releases/latest/download/module.json
+    https://github.com/Angband666/hexcrawl-backdrops/releases/latest/download/module.json
 
 ## AI disclosure
 **All images are AI-generated.** They were made locally with open image models (mainly FLUX.2 klein 4B, Apache 2.0) from the author's own scene descriptions and then checked by the author. No official Dolmenwood art, maps or text were used as input or reference. Code: MIT. Images: CC BY-NC 4.0.

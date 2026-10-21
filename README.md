@@ -1,5 +1,7 @@
 # Hexcrawl Backdrops
 
+<img src="logo/Dolmenwood_Compatibility_Logo_Black_On_White.png" alt="Dolmenwood Compatible Product" width="320">
+
 *Scenes for the Dolmenwood RPG.* [Deutsche Anleitung: README.de.md](README.de.md)
 
 Backdrops for hexcrawl play in Foundry VTT. Every scene comes with variants for time of day, weather, season and campsite, which you switch by hand.
@@ -24,7 +26,7 @@ It does not change weather, time or effects by itself: you pick the variant.
 In Foundry: *Add-on Modules, Install Module*, paste the manifest URL into the field at the bottom:
 
 ```
-https://github.com/angband/hexcrawl-backdrops/releases/latest/download/module.json
+https://github.com/Angband666/hexcrawl-backdrops/releases/latest/download/module.json
 ```
 
 The download is about 870 MB. Enable the module in your world.

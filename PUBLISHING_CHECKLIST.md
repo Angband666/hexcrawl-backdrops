@@ -13,11 +13,13 @@ Nothing has been uploaded yet. State: 2026-10-21.
 - [x] Credited name is "angband" (LICENSE, LICENSE-IMAGES.md, module.json).
 - [x] Release build tested locally (`dist/`).
 
+- [x] Compatibility Logo (both versions) is in `logo/`, shown at the top of both READMEs, in NOTICE.md and in the Foundry module description (the licence asks to feature it prominently).
+- [x] GitHub account is Angband666; URLs use `Angband666/hexcrawl-backdrops` (the credited author name stays "angband" unless you change it).
+
 ## Still open
-- [ ] **Compatibility Logo:** download it from the Dolmenwood Creator Kit (https://necroticgnome.com/products/dolmenwood-creator-kit), put the files in `logo/` (the build script includes this folder), then add `![Dolmenwood Compatible Product](logo/<file>)` to NOTICE.md and both READMEs, and rebuild.
-- [ ] **GitHub:** create the account/repository `angband/hexcrawl-backdrops` (private while preparing, public when you publish). Suggested description: "Scene backdrops for hexcrawl play in Foundry VTT (AI-generated images, free, non-commercial)". Suggested topics: foundry-vtt, foundry-module, dolmenwood, ai-generated, battlemap.
+- [ ] **GitHub:** create the account/repository `Angband666/hexcrawl-backdrops` (private while preparing, public when you publish). Suggested description: "Scene backdrops for hexcrawl play in Foundry VTT (AI-generated images, free, non-commercial)". Suggested topics: foundry-vtt, foundry-module, dolmenwood, ai-generated, battlemap.
 - [ ] **Test in a fresh Foundry world** with the final zip: first-start dialog, import English and German, variants via dialog macro, quick macros and /backdrop, campfire light, movement zones.
-- [ ] **Publish** (needs your OK each time): `git remote add origin ...`, `git push -u origin main`, then `python tools/build_release.py --repo angband/hexcrawl-backdrops --version 0.1.0`, create release `v0.1.0`, paste RELEASE_NOTES.md as the description, attach `dist/hexcrawl-backdrops.zip` (about 870 MB, limit 2 GB) and `dist/module.json`.
+- [ ] **Publish** (needs your OK each time): `git remote add origin ...`, `git push -u origin main`, then `python tools/build_release.py --repo Angband666/hexcrawl-backdrops --version 0.1.0`, create release `v0.1.0`, paste RELEASE_NOTES.md as the description, attach `dist/hexcrawl-backdrops.zip` (about 870 MB, limit 2 GB) and `dist/module.json`.
 - [ ] Install test with the manifest URL.
 - [ ] Mail Necrotic Gnome (3pp@necroticgnome.com): link to the release, as the licence asks to share a copy; offer the zip.
 - [ ] Ask Necrotic Gnome separately about the atmosphere videos if they use Dolmenwood names (not asked yet).
