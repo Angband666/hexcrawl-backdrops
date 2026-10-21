@@ -15,7 +15,7 @@ Backdrops for hexcrawl play in Foundry VTT. Every scene comes with variants for 
 It does not change weather, time or effects by itself: you pick the variant.
 
 ## Why this exists
-I made these scenes for my own Dolmenwood campaign. Other game masters may find them useful, so I share them for free. Some of the AI images are not perfect. That is part of the deal: if one does not work for you, just pick a different one. This is about a good selection of backdrops, not about perfection.
+I made these scenes for my own Dolmenwood campaign. Other game masters may find them useful, so I share them for free. Some of the AI images are not perfect. That is part of the deal: if one does not work for you, just pick a different one. This is about a good selection of backdrops, not about perfection. This is my first release on GitHub, so please be patient with me. I simply hope it will be useful for other game masters.
 
 ## AI disclosure: how the images were made
 **All images in this module are AI-generated.** I made every image locally on my own computer with FLUX.2 klein 4B (Black Forest Labs, Apache 2.0), from my own written scene descriptions. I picked and checked the images and regenerated or edited them where they did not fit the place. I used no official Dolmenwood artwork, maps or text as input or reference, and no model was trained or fine-tuned on Dolmenwood material. The module contains no music and no text from the books. Details: LICENSE-IMAGES.md.

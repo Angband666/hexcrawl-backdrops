@@ -10,7 +10,7 @@ In Foundry: Add-on Modules, Install Module, manifest URL:
     https://github.com/Angband666/hexcrawl-backdrops/releases/latest/download/module.json
 
 ## Why this exists
-I made these scenes for my own Dolmenwood campaign and share them for free in case other game masters find them useful. Some of the AI images are not perfect. If one does not work for you, just pick a different one. This is about a good selection of backdrops, not about perfection.
+I made these scenes for my own Dolmenwood campaign and share them for free in case other game masters find them useful. Some of the AI images are not perfect. If one does not work for you, just pick a different one. This is about a good selection of backdrops, not about perfection. This is my first release on GitHub, so please be patient with me. I simply hope it will be useful for other game masters.
 
 ## AI disclosure
 **All images are AI-generated.** I made every one locally with FLUX.2 klein 4B (Apache 2.0) from my own scene descriptions and checked them myself. No official Dolmenwood art, maps or text were used as input or reference. Code: MIT. Images: CC BY-NC 4.0.
