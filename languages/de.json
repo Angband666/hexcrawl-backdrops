@@ -43,5 +43,20 @@
   "HCB.warn.noVariant": "Diese Szene hat keine Variante „{variant}“.",
   "HCB.warn.unknownVariant": "Unbekannte Variante „{word}“. Gib /backdrop help ein.",
   "HCB.warn.gmOnly": "Das kann nur der GM.",
-  "HCB.notify.macros": "Makros im Ordner „Hexcrawl Backdrops“ bereit. „Bildvariante…“ liegt auf deiner Leiste."
+  "HCB.notify.macros": "Makros im Ordner „Hexcrawl Backdrops“ bereit. „Bildvariante…“ liegt auf deiner Leiste.",
+  "HCB.browser.title": "Hexcrawl Backdrops: Varianten",
+  "HCB.browser.none": "In dieser Welt gibt es noch keine Hexcrawl-Backdrops-Szenen. Importiere sie zuerst (Einstellungen, Einstellungen konfigurieren, Hexcrawl Backdrops).",
+  "HCB.browser.prevScene": "Vorherige Szene",
+  "HCB.browser.nextScene": "Nächste Szene",
+  "HCB.browser.prevVar": "Zurück",
+  "HCB.browser.nextVar": "Weiter",
+  "HCB.browser.current": "Zeigt: {variant}",
+  "HCB.browser.hint": "Klicke ein Bild an, dann zeigt die Szene es sofort. Pfeiltasten: links und rechts wechseln die Variante, hoch und runter die Szene. Die Szene muss nicht geöffnet oder aktiv sein. Ihr Hintergrund wird gespeichert, er stimmt also schon, wenn du sie aktivierst.",
+  "HCB.ctx.name": "Hexcrawl-Varianten…",
+  "HCB.btn.header": "Varianten",
+  "HCB.help.title": "Hexcrawl Backdrops: So wechselst du die Variante",
+  "HCB.help.hotbar": "Das Makro 'Bildvariante…' liegt auf Makroleisten-Platz {slot}.",
+  "HCB.help.noHotbar": "Deine Makroleiste ist voll, deshalb liegt das Makro 'Bildvariante…' nur im Makro-Ordner 'Hexcrawl Backdrops'. Zieh es auf die Leiste.",
+  "HCB.help.ctx": "Oder klicke in der Szenenliste mit rechts auf eine Szene und wähle 'Hexcrawl-Varianten'. Die Szene muss nicht geöffnet sein.",
+  "HCB.help.chat": "Chat: /backdrop öffnet das Fenster, /backdrop next und /backdrop prev blättern durch die Varianten, /backdrop nacht und so weiter zeigen eine direkt."
 }

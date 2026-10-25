@@ -1,9 +1,20 @@
-// Switching the backdrop variant of a scene by hand (dialog, macros, chat command). Nothing is switched automatically.
+// Switching the backdrop variant of a scene by hand (browser window, macros, chat command). Nothing is switched automatically.
 import { MOD, t } from "./constants.mjs";
 
 export const ORDER = ["tag", "nacht", "daemmerung", "regen", "gewitter", "nebel", "winter", "herbst", "fruehling", "sturm", "morgen", "lager_abend", "lager_nacht"];
-const flagOf = scene => scene?.getFlag(MOD, "scene");
+export const flagOf = scene => scene?.getFlag(MOD, "scene");
 const label = k => t(`HCB.variant.${k}`);
+
+/** The variants a scene offers, in the fixed order ("tag" = the plain day image is always there). */
+export function variantKeys(scene) {
+  const f = flagOf(scene);
+  return f ? ORDER.filter(k => k === "tag" || f.variants?.[k]) : [];
+}
+
+/** All scenes of this module in the world, sorted by name. */
+export function moduleScenes() {
+  return game.scenes.filter(s => flagOf(s)).sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+}
 
 /** Light sources that only belong to certain variants (campfire only in the camp variants). */
 async function syncLights(scene, key) {
@@ -13,7 +24,8 @@ async function syncLights(scene, key) {
   if (upd.length) await scene.updateEmbeddedDocuments("AmbientLight", upd);
 }
 
-/** Show a variant ("tag" = the plain day image) on a scene of this module. */
+/** Show a variant ("tag" = the plain day image) on a scene of this module. The scene does not have to be open or active:
+ *  the background is stored in the scene, so it is already right when the scene is activated later. */
 export async function setVariant(scene, key) {
   const f = flagOf(scene);
   if (!f) return ui.notifications.warn(t("HCB.warn.notModuleScene"));
@@ -26,16 +38,19 @@ export async function setVariant(scene, key) {
   await syncLights(scene, key);
 }
 
-/** Dialog: choose a variant for the current scene. */
-export async function chooseVariant(scene = canvas?.scene) {
+/** Next (step = 1) or previous (step = -1) variant of a scene, wrapping around. Returns the key that is now shown. */
+export async function cycleVariant(scene = canvas?.scene, step = 1) {
   const f = flagOf(scene);
   if (!f) return ui.notifications.warn(t("HCB.warn.notModuleScene"));
-  const keys = ORDER.filter(k => k === "tag" || f.variants?.[k]);
-  const options = keys.map(k => `<option value="${k}" ${k === (f.current ?? "tag") ? "selected" : ""}>${label(k)}</option>`).join("");
-  const choice = await foundry.applications.api.DialogV2.prompt({
-    window: { title: t("HCB.variant.title") }, rejectClose: false,
-    content: `<div class="form-group"><label>${t("HCB.variant.label")}</label><select name="variant">${options}</select></div>`,
-    ok: { label: t("HCB.ok"), callback: (ev, button) => button.form.elements.variant.value }
-  });
-  if (choice) return setVariant(scene, choice);
+  const keys = variantKeys(scene);
+  const i = Math.max(0, keys.indexOf(f.current ?? "tag"));
+  const key = keys[(i + step + keys.length) % keys.length];
+  await setVariant(scene, key);
+  return key;
+}
+
+/** Opens the variant window for a scene (kept for macros of version 0.1). */
+export async function chooseVariant(scene = canvas?.scene) {
+  const { openBrowser } = await import("./browser.mjs");
+  return openBrowser(scene);
 }

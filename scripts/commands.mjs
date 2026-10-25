@@ -1,10 +1,12 @@
 import { MOD, t } from "./constants.mjs";
 import { openManager } from "./manager.mjs";
-import { chooseVariant, setVariant } from "./variants.mjs";
+import { setVariant, cycleVariant } from "./variants.mjs";
+import { openBrowser } from "./browser.mjs";
 import { ensureMacros } from "./macros.mjs";
 
-// Chat command:  /backdrop            choose a variant for the current scene (dialog)
+// Chat command:  /backdrop            open the variant window for the current scene
 //                /backdrop <name>     show it directly, e.g. day, night, dusk, rain, storm, mist, winter, autumn, spring, camp, campdusk
+//                /backdrop next | prev    next or previous variant of the current scene
 //                /backdrop import     open the import dialog      /backdrop macros   create the macros      /backdrop help   list the names
 const ALIAS = {
   tag: ["day", "tag"], nacht: ["night", "nacht"], daemmerung: ["dusk", "daemmerung", "dämmerung"], regen: ["rain", "regen"], gewitter: ["storm", "thunderstorm", "gewitter"],
@@ -16,10 +18,12 @@ function lookup(word) { word = word.replace(/\s+/g, "").toLowerCase(); return Ob
 export async function command(arg) {
   const scene = canvas?.scene;
   if (arg === "help") return ChatMessage.create({ whisper: [game.user.id], speaker: { alias: "Hexcrawl Backdrops" },
-    content: `<p>/backdrop &nbsp;·&nbsp; /backdrop import &nbsp;·&nbsp; /backdrop macros &nbsp;·&nbsp; /backdrop &lt;${Object.values(ALIAS).map(a => a[0]).join(" | ")}&gt;</p>` });
+    content: `<p>/backdrop &nbsp;·&nbsp; /backdrop next &nbsp;·&nbsp; /backdrop prev &nbsp;·&nbsp; /backdrop import &nbsp;·&nbsp; /backdrop macros &nbsp;·&nbsp; /backdrop &lt;${Object.values(ALIAS).map(a => a[0]).join(" | ")}&gt;</p>` });
   if (arg === "import" || arg === "setup") return openManager();
   if (arg === "macros" || arg === "makros") { await ensureMacros({ update: true, hotbar: true }); return ui.notifications.info(t("HCB.notify.macros")); }
-  if (!arg) return chooseVariant(scene);
+  if (arg === "next" || arg === "vor" || arg === "weiter") return cycleVariant(scene, 1);
+  if (arg === "prev" || arg === "previous" || arg === "zurueck" || arg === "zurück") return cycleVariant(scene, -1);
+  if (!arg) return openBrowser(scene);
   const key = lookup(arg);
   if (!key) return ui.notifications.warn(t("HCB.warn.unknownVariant", { word: arg }));
   return setVariant(scene, key);

@@ -1,7 +1,7 @@
 // Import dialog: language (English/Deutsch) and which packs to import. Opens automatically on the first start of a world.
 import { MOD, PACKS, t } from "./constants.mjs";
 import { importPack, packStatus } from "./importer.mjs";
-import { ensureMacros } from "./macros.mjs";
+import { ensureMacros, helpHtml } from "./macros.mjs";
 
 let open = false;
 
@@ -39,8 +39,9 @@ export async function openManager({ firstRun = false } = {}) {
     if (!choice) return;
     await game.settings.set(MOD, "language", choice.lang);
     await game.settings.set(MOD, "setupDone", true);
-    try { await ensureMacros({ lang: choice.lang, update: choice.update }); } catch (e) { console.warn(`${MOD} | macros`, e); }
-    if (!choice.packs.length) return;
+    let mr = null;
+    try { mr = await ensureMacros({ lang: choice.lang, update: choice.update, hotbar: true }); } catch (e) { console.warn(`${MOD} | macros`, e); }
+    if (!choice.packs.length) { ChatMessage.create({ whisper: [game.user.id], speaker: { alias: "Hexcrawl Backdrops" }, content: helpHtml(mr?.slot) }); return; }
     ui.notifications.info(t("HCB.notify.start"));
     const lines = [];
     for (const p of choice.packs) {
@@ -48,7 +49,7 @@ export async function openManager({ firstRun = false } = {}) {
         progress: (n, total) => ui.notifications.info(t("HCB.notify.progress", { pack: t(`HCB.pack.${p}`), n, total })) });
       lines.push(t("HCB.report.line", { pack: t(`HCB.pack.${p}`), created: r.created, updated: r.updated, skipped: r.skipped }));
     }
-    ChatMessage.create({ whisper: [game.user.id], speaker: { alias: "Hexcrawl Backdrops" }, content: `<h3>Hexcrawl Backdrops</h3><p>${lines.join("<br>")}</p>` });
+    ChatMessage.create({ whisper: [game.user.id], speaker: { alias: "Hexcrawl Backdrops" }, content: `<h3>Hexcrawl Backdrops</h3><p>${lines.join("<br>")}</p>${helpHtml(mr?.slot)}` });
     ui.notifications.info(t("HCB.notify.done"));
   } catch (e) {
     console.error(`${MOD} | import`, e);

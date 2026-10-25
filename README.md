@@ -22,6 +22,13 @@ I made these scenes for my own Dolmenwood campaign. Other game masters may find 
 ## AI disclosure: how the images were made
 **All images in this module are AI-generated.** I made every image locally on my own computer with FLUX.2 klein 4B (Black Forest Labs, Apache 2.0), from my own written scene descriptions. I picked and checked the images and regenerated or edited them where they did not fit the place. I used no official Dolmenwood artwork, maps or text as input or reference, and no model was trained or fine-tuned on Dolmenwood material. The module contains no music and no text from the books. Details: LICENSE-IMAGES.md.
 
+## Quick start
+1. Open the **Scenes** list on the right, right-click any Hexcrawl scene and choose **Hexcrawl variants**.
+2. In the window that opens, click a picture: the scene changes at once. The arrow keys step through the variants (left, right) and the scenes (up, down).
+3. The scene does not have to be open or active. Choose the variant first, activate the scene later, and your players see the right picture right away.
+
+The macro *Backdrop variant…* does the same. It is put on your hotbar when you import (if the bar is full, it is in the macro folder *Hexcrawl Backdrops*). Chat commands: `/backdrop`, `/backdrop next`, `/backdrop prev`.
+
 ## Preview
 A few scenes and their variants (night, dusk, rain, storm, winter, autumn):
 
@@ -51,14 +58,14 @@ When a GM opens a world with the module for the first time, a dialog appears. Ch
 - The images stay in the module folder, they are not copied into your world.
 
 ## Switching the variant
-Open a scene of the module and pick a variant:
+Pick a variant in one of these ways. The scene does not have to be open or active:
 
-- **Macro** *Backdrop variant…* (put on your hotbar automatically): a list of all variants the scene has.
+- **Macro** *Backdrop variant…* (put on your hotbar automatically): opens the variant window.
 - **Quick macros** in the macro folder *Hexcrawl Backdrops / Backdrop*: *Day, Night, Dusk, Rain & mist, Thunderstorm, Light mist, Winter, Autumn, Spring, Stormy night, Morning, Camp at dusk, Camp at night*. Drag the ones you use to the hotbar.
 - **Chat command** (GM only):
 
 ```
-/backdrop                 opens the list for the current scene
+/backdrop                 opens the variant window for the current scene
 /backdrop night           shows a variant directly: day, night, dusk, rain, storm, mist, winter, autumn, spring, camp, campdusk
 /backdrop import          opens the import dialog
 /backdrop macros          creates missing macros and renames existing ones to the chosen language

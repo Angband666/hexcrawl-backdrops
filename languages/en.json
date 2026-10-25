@@ -43,5 +43,20 @@
   "HCB.warn.noVariant": "This scene has no variant “{variant}”.",
   "HCB.warn.unknownVariant": "Unknown variant “{word}”. Type /backdrop help.",
   "HCB.warn.gmOnly": "Only the GM can do that.",
-  "HCB.notify.macros": "Macros ready in the folder “Hexcrawl Backdrops”. “Backdrop variant…” is on your hotbar."
+  "HCB.notify.macros": "Macros ready in the folder “Hexcrawl Backdrops”. “Backdrop variant…” is on your hotbar.",
+  "HCB.browser.title": "Hexcrawl Backdrops: variants",
+  "HCB.browser.none": "There are no Hexcrawl Backdrops scenes in this world yet. Import them first (Settings, Configure Settings, Hexcrawl Backdrops).",
+  "HCB.browser.prevScene": "Previous scene",
+  "HCB.browser.nextScene": "Next scene",
+  "HCB.browser.prevVar": "Previous",
+  "HCB.browser.nextVar": "Next",
+  "HCB.browser.current": "Showing: {variant}",
+  "HCB.browser.hint": "Click a picture to show it on the scene at once. Arrow keys: left and right change the variant, up and down change the scene. The scene does not have to be open or active. Its background is saved, so it is already right when you activate it.",
+  "HCB.ctx.name": "Hexcrawl variants…",
+  "HCB.btn.header": "Variants",
+  "HCB.help.title": "Hexcrawl Backdrops: how to switch variants",
+  "HCB.help.hotbar": "The macro 'Backdrop variant…' is on hotbar slot {slot}.",
+  "HCB.help.noHotbar": "Your hotbar is full, so the macro 'Backdrop variant…' is only in the macro folder 'Hexcrawl Backdrops'. Drag it to the bar.",
+  "HCB.help.ctx": "Or right-click a scene in the Scenes list and choose 'Hexcrawl variants'. The scene does not have to be open.",
+  "HCB.help.chat": "Chat: /backdrop opens the window, /backdrop next and /backdrop prev step through the variants, /backdrop night and so on show one directly."
 }
