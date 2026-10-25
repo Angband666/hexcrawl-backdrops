@@ -34,7 +34,7 @@ Einige Szenen mit ihren Varianten (Nacht, Dämmerung, Regen, Gewitter, Winter, H
 ## Voraussetzungen
 - Foundry VTT v14
 - Die Dolmenwood-Grundbücher
-- Empfohlen: **Alternate Zone Movement** (Bewegungszonen in den Begegnungsorten)
+- Optional: **Alternate Zone Movement**. Die Begegnungsorte enthalten Bewegungszonen, die dieses Modul unterstützt. Du brauchst es **nicht**, um die Szenen zu benutzen: Ohne das Modul sind die Szenen ganz normale Hintergründe, und du siehst keinen Unterschied. Ist es installiert, ziehen die Spielfiguren in den Begegnungsorten von Zone zu Zone.
 
 ## Installation
 In Foundry: *Add-on-Module, Modul installieren*, die Manifest-URL unten in das Feld einfügen:

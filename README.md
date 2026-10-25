@@ -32,7 +32,7 @@ A few scenes and their variants (night, dusk, rain, storm, winter, autumn):
 ## Requirements
 - Foundry VTT v14
 - The Dolmenwood core books
-- Recommended: **Alternate Zone Movement** (movement zones in the encounter places)
+- Optional: **Alternate Zone Movement**. The encounter places contain movement zones that this module supports. You do **not** need it to use the scenes: without it the scenes work as ordinary backdrops, and you will see no difference. With it installed, tokens move from zone to zone in the encounter places.
 
 ## Installation
 In Foundry: *Add-on Modules, Install Module*, paste the manifest URL into the field at the bottom:
