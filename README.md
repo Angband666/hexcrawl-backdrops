@@ -29,11 +29,6 @@ I made these scenes for my own Dolmenwood campaign. Other game masters may find 
 
 The macro *Backdrop variant…* does the same. It is put on your hotbar when you import (if the bar is full, it is in the macro folder *Hexcrawl Backdrops*). Chat commands: `/backdrop`, `/backdrop next`, `/backdrop prev`.
 
-<img src="docs/screenshot-scenes-list.png" alt="The Variants button above the Scenes list" width="300">
-<img src="docs/screenshot-context-menu.png" alt="Right-click menu of a scene with the entry Hexcrawl variants" width="170">
-
-<img src="docs/screenshot-window.png" alt="The variant window with all variants of one scene" width="700">
-
 
 ## Preview
 A few scenes and their variants (night, dusk, rain, storm, winter, autumn):
@@ -79,6 +74,11 @@ Pick a variant in one of these ways. The scene does not have to be open or activ
 ```
 
 `/hcb` works as a short form. The campfire light appears only in the campsite variants. Not every scene has every variant (interiors have night, stormy night and morning; dungeons only the camp at night); you get a message if a variant is missing.
+
+<img src="docs/screenshot-scenes-list.png" alt="The Variants button above the Scenes list" width="300">
+<img src="docs/screenshot-context-menu.png" alt="Right-click menu of a scene with the entry Hexcrawl variants" width="170">
+
+<img src="docs/screenshot-window.png" alt="The variant window with all variants of one scene" width="700">
 
 ## Settings
 - Language of scene names
