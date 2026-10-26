@@ -23,11 +23,16 @@ I made these scenes for my own Dolmenwood campaign. Other game masters may find 
 **All images in this module are AI-generated.** I made every image locally on my own computer with FLUX.2 klein 4B (Black Forest Labs, Apache 2.0), from my own written scene descriptions. I picked and checked the images and regenerated or edited them where they did not fit the place. I used no official Dolmenwood artwork, maps or text as input or reference, and no model was trained or fine-tuned on Dolmenwood material. The module contains no music and no text from the books. Details: LICENSE-IMAGES.md.
 
 ## Quick start
-1. Open the **Scenes** list on the right, right-click any Hexcrawl scene and choose **Hexcrawl variants**.
+1. Open the **Scenes** list on the right, right-click any Hexcrawl scene and choose **Hexcrawl variants**, or press the **Variants** button above the list.
 2. In the window that opens, click a picture: the scene changes at once. The arrow keys step through the variants (left, right) and the scenes (up, down).
 3. The scene does not have to be open or active. Choose the variant first, activate the scene later, and your players see the right picture right away.
 
 The macro *Backdrop variant…* does the same. It is put on your hotbar when you import (if the bar is full, it is in the macro folder *Hexcrawl Backdrops*). Chat commands: `/backdrop`, `/backdrop next`, `/backdrop prev`.
+
+<img src="docs/screenshot-scenes-list.png" alt="The Variants button above the Scenes list" width="300">
+<img src="docs/screenshot-context-menu.png" alt="Right-click menu of a scene with the entry Hexcrawl variants" width="170">
+
+<img src="docs/screenshot-window.webp" alt="The variant window with all variants of one scene" width="700">
 
 ## Preview
 A few scenes and their variants (night, dusk, rain, storm, winter, autumn):

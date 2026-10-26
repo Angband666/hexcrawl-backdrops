@@ -25,11 +25,16 @@ Ich habe diese Szenen für meine eigene Dolmenwood-Kampagne gemacht. Vielleicht 
 **Alle Bilder in diesem Modul sind KI-generiert.** Ich habe jedes Bild lokal auf meinem eigenen Computer mit FLUX.2 klein 4B (Black Forest Labs, Apache 2.0) erzeugt, anhand meiner eigenen schriftlichen Szenenbeschreibungen. Ich habe die Bilder ausgewählt und geprüft und, wenn eines nicht zum Ort passte, neu erzeugt oder bearbeitet. Ich habe keine offiziellen Dolmenwood-Bilder, -Karten oder -Texte als Eingabe oder Vorlage benutzt, und kein Modell wurde mit Dolmenwood-Material trainiert oder nachtrainiert. Das Modul enthält keine Musik und keine Texte aus den Büchern. Einzelheiten: LICENSE-IMAGES.md.
 
 ## Schnellstart
-1. Rechts die **Szenenliste** öffnen, eine Hexcrawl-Szene mit rechts anklicken und **Hexcrawl-Varianten** wählen.
+1. Rechts die **Szenenliste** öffnen, eine Hexcrawl-Szene mit rechts anklicken und **Hexcrawl-Varianten** wählen, oder oben über der Liste auf **Varianten** klicken.
 2. Im Fenster ein Bild anklicken: Die Szene wechselt sofort. Die Pfeiltasten blättern durch die Varianten (links, rechts) und die Szenen (hoch, runter).
 3. Die Szene muss nicht geöffnet oder aktiv sein. Erst die Variante wählen, die Szene später aktivieren, und die Spieler sehen gleich das richtige Bild.
 
 Das Makro *Bildvariante…* macht dasselbe. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*). Chat-Befehle: `/backdrop`, `/backdrop next`, `/backdrop prev`.
+
+<img src="docs/screenshot-scenes-list.png" alt="Der Knopf Varianten über der Szenenliste" width="300">
+<img src="docs/screenshot-context-menu.png" alt="Rechtsklick-Menü einer Szene mit dem Eintrag Hexcrawl variants" width="170">
+
+<img src="docs/screenshot-window.webp" alt="Das Varianten-Fenster mit allen Varianten einer Szene" width="700">
 
 ## Vorschau
 Einige Szenen mit ihren Varianten (Nacht, Dämmerung, Regen, Gewitter, Winter, Herbst):
