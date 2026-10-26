@@ -31,10 +31,6 @@ Ich habe diese Szenen für meine eigene Dolmenwood-Kampagne gemacht. Vielleicht 
 
 Das Makro *Bildvariante…* macht dasselbe. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*). Chat-Befehle: `/backdrop`, `/backdrop next`, `/backdrop prev`.
 
-<img src="docs/screenshot-scenes-list.png" alt="Der Knopf Varianten über der Szenenliste" width="300">
-<img src="docs/screenshot-context-menu.png" alt="Rechtsklick-Menü einer Szene mit dem Eintrag Hexcrawl variants" width="170">
-
-<img src="docs/screenshot-window.webp" alt="Das Varianten-Fenster mit allen Varianten einer Szene" width="700">
 
 ## Vorschau
 Einige Szenen mit ihren Varianten (Nacht, Dämmerung, Regen, Gewitter, Winter, Herbst):
