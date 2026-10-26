@@ -4,11 +4,9 @@
 
 *Szenen für das Dolmenwood-Rollenspiel.* [English instructions: README.md](README.md)
 
-> ☕ **Dieses Modul ist und bleibt kostenlos.** Wenn es deinem Spiel hilft und du magst, kannst du mir [einen Kaffee spendieren](https://buymeacoffee.com/angband). Das ist völlig freiwillig, und das Modul hängt in keiner Weise davon ab.
+> ☕ **Dieses Modul ist und bleibt kostenlos.** Wenn es deinem Spiel hilft und du magst, kannst du mir <a href="https://buymeacoffee.com/angband"><img src="docs/bmc-button.svg" alt="Buy me a coffee" width="130"></a>. Das ist völlig freiwillig, und das Modul hängt in keiner Weise davon ab.
 
-<a href="https://buymeacoffee.com/angband"><img src="docs/bmc-button.svg" alt="Buy me a coffee" width="150"></a>
-
-Hintergründe für Hexcrawls in Foundry VTT. Jede Szene hat Varianten für Tageszeit, Wetter, Jahreszeit und Lager, die du von Hand umschaltest.
+Hintergründe für Hexcrawls in Foundry VTT. Jede Szene hat Varianten für Tageszeit, Wetter, Jahreszeit und Lager, die du von Hand umschaltest. Es ändert Wetter, Zeit oder Effekte nicht von selbst.
 
 - **159 Begegnungsorte**: Wald, Moor und Wasser, Siedlungen, Gasthäuser und Innenräume, Dungeons und Lagerplätze
 - **200 Hex-Szenen**: eine Landschaft je Hexfeld, nummeriert von `0101` bis `1906`
@@ -16,21 +14,46 @@ Hintergründe für Hexcrawls in Foundry VTT. Jede Szene hat Varianten für Tages
 - **Varianten**: Nacht, Dämmerung, Regen und Nebel, Gewitter, leichter Nebel, Winter, Herbst, Frühling sowie Lager am Abend und bei Nacht (Innenräume: Nacht, Sturmnacht, Morgen)
 - **Sprachen**: Szenen- und Ordnernamen auf Deutsch oder Englisch, gewählt beim Import.
 
-Es ändert Wetter, Zeit oder Effekte nicht von selbst: Du wählst die Variante.
+## Installation
+**Voraussetzungen:** Foundry VTT v14 und die Dolmenwood-Grundbücher. Optional: **Alternate Zone Movement**. Die Begegnungsorte enthalten Bewegungszonen, die dieses Modul unterstützt. Du brauchst es **nicht**, um die Szenen zu benutzen: Ohne das Modul sind es ganz normale Hintergründe, mit ihm ziehen die Spielfiguren in den Begegnungsorten von Zone zu Zone.
 
-## Warum es das gibt
-Ich habe diese Szenen für meine eigene Dolmenwood-Kampagne gemacht. Vielleicht helfen sie auch anderen Spielleitern, deshalb teile ich sie kostenlos. Einige der KI-Bilder sind nicht perfekt. Damit muss man leben: Passt ein Bild nicht, nimmt man einfach ein anderes. Es geht um eine gute Auswahl an Hintergründen, nicht um Perfektionismus. Das ist meine erste Veröffentlichung auf GitHub, bitte seid nachsichtig mit mir. Ich hoffe einfach, dass es anderen Spielleitern hilft.
+In Foundry: *Add-on-Module, Modul installieren*, die Manifest-URL unten in das Feld einfügen, installieren (etwa 880 MB) und das Modul in der Welt aktivieren:
 
-## KI-Hinweis: So sind die Bilder entstanden
-**Alle Bilder in diesem Modul sind KI-generiert.** Ich habe jedes Bild lokal auf meinem eigenen Computer mit FLUX.2 klein 4B (Black Forest Labs, Apache 2.0) erzeugt, anhand meiner eigenen schriftlichen Szenenbeschreibungen. Ich habe die Bilder ausgewählt und geprüft und, wenn eines nicht zum Ort passte, neu erzeugt oder bearbeitet. Ich habe keine offiziellen Dolmenwood-Bilder, -Karten oder -Texte als Eingabe oder Vorlage benutzt, und kein Modell wurde mit Dolmenwood-Material trainiert oder nachtrainiert. Das Modul enthält keine Musik und keine Texte aus den Büchern. Einzelheiten: LICENSE-IMAGES.md.
+```
+https://github.com/Angband666/hexcrawl-backdrops/releases/latest/download/module.json
+```
 
-## Schnellstart
-1. Rechts die **Szenenliste** öffnen, eine Hexcrawl-Szene mit rechts anklicken und **Hexcrawl-Varianten** wählen, oder oben über der Liste auf **Varianten** klicken.
-2. Im Fenster ein Bild anklicken: Die Szene wechselt sofort. Die Pfeiltasten blättern durch die Varianten (links, rechts) und die Szenen (hoch, runter).
-3. Die Szene muss nicht geöffnet oder aktiv sein. Erst die Variante wählen, die Szene später aktivieren, und die Spieler sehen gleich das richtige Bild.
+## Benutzung
+### 1. Szenen importieren
+Öffnet ein GM eine Welt zum ersten Mal mit dem Modul, erscheint ein Dialog. **English** oder **Deutsch** wählen, dazu die gewünschten Pakete, dann *Importieren*. Die Szenen entstehen im Ordner *Hexcrawl Backdrops*, die Bilder bleiben im Modulordner. Den Dialog kannst du jederzeit wieder öffnen: *Einstellungen, Einstellungen konfigurieren, Hexcrawl Backdrops, Szenen importieren…*
 
-Das Makro *Bildvariante…* macht dasselbe. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*). Chat-Befehle: `/backdrop`, `/backdrop next`, `/backdrop prev`.
+- *Importieren* legt fehlende Szenen an und überspringt vorhandene. Du kannst es gefahrlos wiederholen.
+- *Aktualisieren und umbenennen* verknüpft die Varianten bereits importierter Szenen neu und benennt Szenen und Ordner in die gewählte Sprache um. Eigene Änderungen an den Szenen bleiben erhalten.
 
+### 2. Variante umschalten
+Rechts die **Szenenliste** öffnen, eine Hexcrawl-Szene mit rechts anklicken und **Hexcrawl-Varianten** wählen, oder oben über der Liste auf **Varianten** klicken. Im Fenster ein Bild anklicken, dann wechselt die Szene sofort. Die Pfeiltasten blättern durch die Varianten (links, rechts) und die Szenen (hoch, runter).
+
+Die Szene muss nicht geöffnet oder aktiv sein. Erst die Variante wählen, die Szene später aktivieren, und die Spieler sehen gleich das richtige Bild.
+
+<img src="docs/screenshot-scenes-list.png" alt="Der Knopf Varianten über der Szenenliste" width="300">
+<img src="docs/screenshot-context-menu.png" alt="Rechtsklick-Menü einer Szene mit dem Eintrag Hexcrawl variants" width="170">
+
+<img src="docs/screenshot-window.png" alt="Das Varianten-Fenster mit allen Varianten einer Szene" width="700">
+
+Weitere Wege:
+- **Makro** *Bildvariante…* öffnet dasselbe Fenster. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*). Im Ordner *Hexcrawl Backdrops / Bild* liegen außerdem Schnellmakros für *Nächste Variante*, *Vorherige Variante* und jede einzelne Variante. Zieh die, die du brauchst, auf die Leiste.
+- **Chat-Befehle** (nur GM; `/hcb` funktioniert als Kurzform):
+
+```
+/backdrop                 öffnet das Varianten-Fenster für die aktuelle Szene
+/backdrop next            nächste Variante (auch: /backdrop prev)
+/backdrop nacht           zeigt direkt eine Variante: tag, nacht, dämmerung, regen, gewitter, nebel, winter, herbst, frühling, lager, lagerabend
+/backdrop import          öffnet den Import-Dialog
+/backdrop macros          legt fehlende Makros an und benennt vorhandene in die gewählte Sprache um
+/backdrop help            listet die Namen auf
+```
+
+Das Lagerfeuerlicht erscheint nur in den Lager-Varianten. Nicht jede Szene hat jede Variante (Innenräume haben Nacht, Sturmnacht und Morgen; Dungeons nur das Lager bei Nacht); fehlt eine Variante, erscheint eine Meldung.
 
 ## Vorschau
 Einige Szenen mit ihren Varianten (Nacht, Dämmerung, Regen, Gewitter, Winter, Herbst):
@@ -39,58 +62,16 @@ Einige Szenen mit ihren Varianten (Nacht, Dämmerung, Regen, Gewitter, Winter, H
 
 ![Hex-Landschaften](docs/preview-hexes.jpg)
 
-## Voraussetzungen
-- Foundry VTT v14
-- Die Dolmenwood-Grundbücher
-- Optional: **Alternate Zone Movement**. Die Begegnungsorte enthalten Bewegungszonen, die dieses Modul unterstützt. Du brauchst es **nicht**, um die Szenen zu benutzen: Ohne das Modul sind die Szenen ganz normale Hintergründe, und du siehst keinen Unterschied. Ist es installiert, ziehen die Spielfiguren in den Begegnungsorten von Zone zu Zone.
+## Warum es das gibt
+Ich habe diese Szenen für meine eigene Dolmenwood-Kampagne gemacht. Vielleicht helfen sie auch anderen Spielleitern, deshalb teile ich sie kostenlos. Einige der KI-Bilder sind nicht perfekt. Damit muss man leben: Passt ein Bild nicht, nimmt man einfach ein anderes. Es geht um eine gute Auswahl an Hintergründen, nicht um Perfektionismus. Das ist meine erste Veröffentlichung auf GitHub, bitte seid nachsichtig mit mir. Ich hoffe einfach, dass es anderen Spielleitern hilft.
 
-## Installation
-In Foundry: *Add-on-Module, Modul installieren*, die Manifest-URL unten in das Feld einfügen:
-
-```
-https://github.com/Angband666/hexcrawl-backdrops/releases/latest/download/module.json
-```
-
-Der Download ist etwa 870 MB groß. Das Modul in der Welt aktivieren.
-
-## Erster Start
-Öffnet ein GM eine Welt zum ersten Mal mit dem Modul, erscheint ein Dialog. **English** oder **Deutsch** wählen, dazu die gewünschten Pakete, dann *Importieren*. Die Szenen entstehen im Ordner *Hexcrawl Backdrops*. Den Dialog kannst du jederzeit wieder öffnen: *Einstellungen, Einstellungen konfigurieren, Hexcrawl Backdrops, Szenen importieren…*
-
-- *Importieren* legt fehlende Szenen an und überspringt vorhandene. Du kannst es gefahrlos wiederholen.
-- *Aktualisieren und umbenennen* verknüpft die Varianten bereits importierter Szenen neu und benennt Szenen und Ordner in die gewählte Sprache um. Eigene Änderungen an den Szenen bleiben erhalten.
-- Die Bilder bleiben im Modulordner, sie werden nicht in deine Welt kopiert.
-
-## Variante umschalten
-Wähle eine Variante auf einem dieser Wege. Die Szene muss nicht geöffnet oder aktiv sein:
-
-- **Makro** *Bildvariante…* (wird automatisch auf deine Makroleiste gelegt): öffnet das Varianten-Fenster.
-- **Schnellmakros** im Makro-Ordner *Hexcrawl Backdrops / Bild*: *Tag, Nacht, Dämmerung, Regen & Nebel, Gewitter, Leichter Nebel, Winter, Herbst, Frühling, Sturmnacht, Morgen, Lager am Abend, Lager bei Nacht*. Zieh die, die du brauchst, auf die Leiste.
-- **Chat-Befehl** (nur GM):
-
-```
-/backdrop                 öffnet das Varianten-Fenster für die aktuelle Szene
-/backdrop nacht           zeigt direkt eine Variante: tag, nacht, dämmerung, regen, gewitter, nebel, winter, herbst, frühling, lager, lagerabend
-/backdrop import          öffnet den Import-Dialog
-/backdrop macros          legt fehlende Makros an und benennt vorhandene in die gewählte Sprache um
-/backdrop help            listet die Namen auf
-```
-
-`/hcb` funktioniert als Kurzform. Das Lagerfeuerlicht erscheint nur in den Lager-Varianten. Nicht jede Szene hat jede Variante (Innenräume haben Nacht, Sturmnacht und Morgen; Dungeons nur das Lager bei Nacht); fehlt eine Variante, erscheint eine Meldung.
-
-<img src="docs/screenshot-scenes-list.png" alt="Der Knopf Varianten über der Szenenliste" width="300">
-<img src="docs/screenshot-context-menu.png" alt="Rechtsklick-Menü einer Szene mit dem Eintrag Hexcrawl variants" width="170">
-
-<img src="docs/screenshot-window.png" alt="Das Varianten-Fenster mit allen Varianten einer Szene" width="700">
-
-## Einstellungen
-- Sprache der Szenennamen
-- Knopf *Szenen importieren…*
+## KI-Hinweis: So sind die Bilder entstanden
+**Alle Bilder in diesem Modul sind KI-generiert.** Ich habe jedes Bild lokal auf meinem eigenen Computer mit FLUX.2 klein 4B (Black Forest Labs, Apache 2.0) erzeugt, anhand meiner eigenen schriftlichen Szenenbeschreibungen. Ich habe die Bilder ausgewählt und geprüft und, wenn eines nicht zum Ort passte, neu erzeugt oder bearbeitet. Ich habe keine offiziellen Dolmenwood-Bilder, -Karten oder -Texte als Eingabe oder Vorlage benutzt, und kein Modell wurde mit Dolmenwood-Material trainiert oder nachtrainiert. Das Modul enthält keine Musik und keine Texte aus den Büchern. Einzelheiten: LICENSE-IMAGES.md.
 
 ## Hinweise
-- Hex-Szenen heißen nur nach ihrer Hex-Nummer.
-- Die Feen-Szenen tragen die Namen der Feenstraßen und Feenreiche.
+- Einstellungen: die Sprache der Szenennamen und der Knopf *Szenen importieren…*
+- Hex-Szenen heißen nur nach ihrer Hex-Nummer. Die Feen-Szenen tragen die Namen der Feenstraßen und Feenreiche.
 - Die Szenen entstehen in der Größe ihres Bildes. Spielfiguren funktionieren wie auf jeder anderen Szene.
-- Ältere Testversionen haben Wetter-Makros angelegt; sie werden automatisch entfernt.
 
 ## Urheber und rechtliche Hinweise
 Code: MIT, siehe LICENSE. Bilder: CC BY-NC 4.0, siehe LICENSE-IMAGES.md. Erstellt mit FLUX.2 klein 4B.
