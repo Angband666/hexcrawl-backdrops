@@ -35,16 +35,13 @@ Rechts die **Szenenliste** öffnen, eine Hexcrawl-Szene mit rechts anklicken und
 
 Die Szene muss nicht geöffnet oder aktiv sein. Eine Zeile im Fenster sagt dir, was gilt: Ist die Szene aktiv, sehen die Spieler jede Änderung sofort; sonst wird das Bild gespeichert und erscheint, wenn du die Szene aktivierst. Dafür gibt es die Knöpfe **Aktivieren** und **Ansehen** (nur für dich), oder ein Doppelklick auf ein Bild wählt es und aktiviert die Szene in einem Schritt.
 
+<img src="docs/screenshot-window.png" alt="Das Varianten-Fenster: Suchfeld, Statuszeile mit den Knöpfen Den Spielern zeigen, Ansehen und Aktivieren, und alle Varianten einer Szene" width="700">
+
 ### 3. Den Spielern ein Bild zeigen
 **Den Spielern zeigen** im Varianten-Fenster schickt das gewählte Bild als großes Bildfenster an alle Spieler. Die Szene wird nicht aktiviert, deine eigene Ansicht bleibt, wie sie ist. Das passt zum Spiel am Tisch mit Spielerbildschirm: Auf deinem Bildschirm bleibt die Übersichtskarte, die Landschaft zeigst du Hex für Hex; aktiviert wird die Szene erst, wenn Spielfiguren darauf sollen. Dasselbe geht mit `/backdrop show` und dem Makro *Bild den Spielern zeigen*.
 
-<img src="docs/screenshot-scenes-list.png" alt="Der Knopf Varianten über der Szenenliste" width="300">
-<img src="docs/screenshot-context-menu.png" alt="Rechtsklick-Menü einer Szene mit dem Eintrag Hexcrawl variants" width="170">
-
-<img src="docs/screenshot-window.png" alt="Das Varianten-Fenster: Suchfeld, Statuszeile mit den Knöpfen Den Spielern zeigen, Ansehen und Aktivieren, und alle Varianten einer Szene" width="700">
-
-Weitere Wege:
-- **Makro** *Bildvariante…* öffnet dasselbe Fenster, *Bild den Spielern zeigen* teilt das Bild. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*). Im Ordner *Hexcrawl Backdrops / Bild* liegen außerdem Schnellmakros für *Nächste Variante*, *Vorherige Variante* und jede einzelne Variante. Zieh die, die du brauchst, auf die Leiste.
+Weitere Wege, das Fenster zu öffnen und Varianten umzuschalten:
+- **Makro** *Bildvariante…* öffnet dasselbe Fenster. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*, neben *Bild den Spielern zeigen*). Im Ordner *Hexcrawl Backdrops / Bild* liegen außerdem Schnellmakros für *Nächste Variante*, *Vorherige Variante* und jede einzelne Variante. Zieh die, die du brauchst, auf die Leiste.
 - **Chat-Befehle** (nur GM; `/hcb` funktioniert als Kurzform):
 
 ```

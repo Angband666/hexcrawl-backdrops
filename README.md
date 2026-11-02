@@ -35,16 +35,13 @@ Open the **Scenes** list on the right, right-click any Hexcrawl scene and choose
 
 The scene does not have to be open or active. A line in the window tells you which: if the scene is active, your players see every change at once; if not, the picture is saved and shown when you activate the scene. Use the buttons **Activate** and **View** (only for you), or double-click a picture to choose it and activate the scene in one step.
 
+<img src="docs/screenshot-window.png" alt="The variant window: search field, active state with the buttons Show to players, View and Activate, and all variants of one scene" width="700">
+
 ### 3. Show a picture to the players
 **Show to players** in the variant window sends the chosen picture to all players as a large image window. The scene is not activated and your own view stays as it is. This suits play at the table with a player screen: keep the overland map on your screen and show the landscape hex by hex; activate the scene only when you need tokens on it. The same works with `/backdrop show` and the macro *Show backdrop to players*.
 
-<img src="docs/screenshot-scenes-list.png" alt="The Variants button above the Scenes list" width="300">
-<img src="docs/screenshot-context-menu.png" alt="Right-click menu of a scene with the entry Hexcrawl variants" width="170">
-
-<img src="docs/screenshot-window.png" alt="The variant window: search field, active state with the buttons Show to players, View and Activate, and all variants of one scene" width="700">
-
-More ways:
-- **Macro** *Backdrop variant…* opens the same window, *Show backdrop to players* shares the picture. It is put on your hotbar when you import (if the bar is full, it is in the macro folder *Hexcrawl Backdrops*). The folder *Hexcrawl Backdrops / Backdrop* also holds quick macros for *Next variant*, *Previous variant* and every single variant. Drag the ones you use to the hotbar.
+More ways to open the window and switch variants:
+- **Macro** *Backdrop variant…* opens the same window. It is put on your hotbar when you import (if the bar is full, it is in the macro folder *Hexcrawl Backdrops*, next to *Show backdrop to players*). The folder *Hexcrawl Backdrops / Backdrop* also holds quick macros for *Next variant*, *Previous variant* and every single variant. Drag the ones you use to the hotbar.
 - **Chat commands** (GM only; `/hcb` works as a short form):
 
 ```
