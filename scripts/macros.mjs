@@ -1,12 +1,13 @@
 // World macros, created once (and on request):
 //   Backdrop variant…            (opens the variant window, in the main folder, also put on the hotbar)
+//   Show backdrop to players     (shares the picture of the scene in the variant window, in the main folder)
 //   Backdrop: Next variant, Previous variant, Day, Night, Dusk, Rain & mist, Thunderstorm, Light mist, Winter, Autumn, Spring, Stormy night, Morning, Camp at dusk, Camp at night
 //                                (quick macros, folder "Backdrop")
 // Older versions also created weather macros; those are removed again.
 import { MOD, PATH, t } from "./constants.mjs";
 import { ORDER } from "./variants.mjs";
 
-export const MACROS_VERSION = 5;   // raise when macros change, existing worlds then get the update on the next start
+export const MACROS_VERSION = 6;   // raise when macros change, existing worlds then get the update on the next start
 const API = `game.modules.get("${MOD}").api`;
 // variant key -> [icon, English, Deutsch]
 const VL = {
@@ -21,6 +22,7 @@ const FOLDERS = { macros: { en: "Hexcrawl Backdrops", de: "Hexcrawl Backdrops" }
 export function macroDefs(lang) {
   const de = lang === "de", j = de ? 2 : 1, pre = de ? "Bild" : "Backdrop";
   const defs = [{ key: "variant", folder: "macros", name: de ? "Bildvariante…" : "Backdrop variant…", img: icon("variant"), command: `${API}.openBrowser();` }];
+  defs.push({ key: "show", folder: "macros", name: de ? "Bild den Spielern zeigen" : "Show backdrop to players", img: icon("variant"), command: `${API}.showToPlayers();` });
   defs.push({ key: "next", folder: "macros-backdrop", name: `${pre}: ${de ? "Nächste Variante" : "Next variant"}`, img: icon("variant"), command: `${API}.cycleVariant(canvas.scene, 1);` });
   defs.push({ key: "prev", folder: "macros-backdrop", name: `${pre}: ${de ? "Vorherige Variante" : "Previous variant"}`, img: icon("variant"), command: `${API}.cycleVariant(canvas.scene, -1);` });
   for (const k of ORDER) defs.push({ key: `v-${k}`, folder: "macros-backdrop", name: `${pre}: ${VL[k][j]}`, img: icon(VL[k][0]), command: `${API}.setVariant(canvas.scene, "${k}");` });

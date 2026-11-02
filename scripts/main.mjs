@@ -2,7 +2,7 @@ import { MOD, t } from "./constants.mjs";
 import { registerSettings } from "./settings.mjs";
 import { openManager } from "./manager.mjs";
 import { importPack, repairThumbs } from "./importer.mjs";
-import { chooseVariant, setVariant, cycleVariant } from "./variants.mjs";
+import { chooseVariant, setVariant, cycleVariant, showToPlayers } from "./variants.mjs";
 import { openBrowser, registerDirectoryHooks } from "./browser.mjs";
 import { registerChatCommand } from "./commands.mjs";
 import { ensureMacros, helpHtml, MACROS_VERSION } from "./macros.mjs";
@@ -12,7 +12,7 @@ Hooks.once("init", () => { registerSettings(); });
 registerDirectoryHooks();
 
 Hooks.once("ready", () => {
-  game.modules.get(MOD).api = { openManager, importPack, chooseVariant, setVariant, cycleVariant, openBrowser, ensureMacros };
+  game.modules.get(MOD).api = { openManager, importPack, chooseVariant, setVariant, cycleVariant, showToPlayers, openBrowser, ensureMacros };
   console.log(`${MOD} | chat command /backdrop registered via ${registerChatCommand()}`);
   repairThumbs().then(n => { if (n) console.log(`${MOD} | preview images set for ${n} scenes`); }).catch(e => console.warn(`${MOD} | thumbnails`, e));
   // New macro version (0.2): refresh the macros once and tell the GM where everything is.

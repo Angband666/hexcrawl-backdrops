@@ -12,6 +12,10 @@ export function registerSettings() {
     name: "HCB.settings.language.name", hint: "HCB.settings.language.hint", scope: "world", config: true, type: String, default: guess,
     choices: { en: "English", de: "Deutsch" }
   });
+  game.settings.register(MOD, "controlButton", {
+    name: "HCB.settings.controlButton.name", hint: "HCB.settings.controlButton.hint", scope: "client", config: true, type: Boolean, default: true,
+    requiresReload: true
+  });
   game.settings.register(MOD, "macrosVersion", { scope: "world", config: false, type: Number, default: 0 });
   game.settings.register(MOD, "setupDone", { scope: "world", config: false, type: Boolean, default: false });
   game.settings.registerMenu(MOD, "manager", {

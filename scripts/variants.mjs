@@ -49,6 +49,23 @@ export async function cycleVariant(scene = canvas?.scene, step = 1) {
   return key;
 }
 
+/** Shows the picture a scene currently has (its chosen variant) to all players as a large image window, without activating the scene.
+ *  Without a scene: the one in the variant window, else the scene you are looking at. */
+export async function showToPlayers(scene) {
+  if (!game.user.isGM) return ui.notifications.warn(t("HCB.warn.gmOnly"));
+  if (!scene) {
+    const { browserInstance } = await import("./browser.mjs");
+    const b = browserInstance();
+    scene = [b?.rendered ? b.scene : null, canvas?.scene, b?.scene].find(s => s && flagOf(s));
+  }
+  const f = flagOf(scene);
+  if (!f) return ui.notifications.warn(t("HCB.warn.notModuleScene"));
+  const key = f.current ?? "tag";
+  const src = key === "tag" ? f.tag : f.variants?.[key] ?? f.tag;
+  // Only sent to the players: the GM's own screen (often the map) stays as it is; Foundry confirms with a notification.
+  new foundry.applications.apps.ImagePopout({ src, window: { title: scene.name }, showTitle: false }).shareImage();
+}
+
 /** Opens the variant window for a scene (kept for macros of version 0.1). */
 export async function chooseVariant(scene = canvas?.scene) {
   const { openBrowser } = await import("./browser.mjs");

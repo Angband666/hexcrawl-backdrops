@@ -1,13 +1,14 @@
-# Hexcrawl Backdrops 0.2.0
+# Hexcrawl Backdrops 0.3.0
 
-## New in 0.2.0
-- **Variant window that stays open.** One click on a picture switches the scene at once. Arrow keys step through the variants (left, right) and the scenes (up, down). A menu lets you jump to any scene of the module.
-- **Right-click a scene in the Scenes list and choose "Hexcrawl variants"** (also a "Variants" button above the list). The scene does not have to be open or active: the variant is saved in the scene, so it is already right when you activate it.
-- **New macros "Next variant" and "Previous variant"** and the chat commands `/backdrop next` and `/backdrop prev`. The macro "Backdrop variant..." now opens the window.
-- **A chat message after the import** (and once after this update) tells you where the macro is and how else to switch variants.
-- README: Alternate Zone Movement is optional, and a quick start at the top.
+## New in 0.3.0
+- **Show a picture to the players without activating the scene.** The button **Show to players** in the variant window (also `/backdrop show` and a macro) shares the chosen picture with all players as a large image window. Your own view, for example the overland map, stays as it is. Handy for showing the landscape hex by hex; activate the scene only when you need tokens on it.
+- **Search field** in the variant window: type part of a name or a hex number, e.g. `0412`.
+- **Clear state:** the window says whether the scene is active (players see every change at once) or not (the change is saved for later).
+- **Activate and View buttons**, and a double-click on a picture chooses it and activates the scene in one step.
+- **A Hexcrawl Backdrops button of its own in the scene controls on the left.** It opens the variant window and has a tool to show the picture to the players (can be switched off in the module settings).
+- **Fixed:** the arrow keys in the variant window no longer pan the canvas behind it.
 
-Thanks to the tester whose notes led to these changes. Update in Foundry as usual; your imported scenes keep working.
+Thanks again to the tester whose notes led to these changes. Update in Foundry as usual; your imported scenes keep working.
 
 ---
 

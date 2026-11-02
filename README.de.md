@@ -31,9 +31,12 @@ https://github.com/Angband666/hexcrawl-backdrops/releases/latest/download/module
 - *Aktualisieren und umbenennen* verknüpft die Varianten bereits importierter Szenen neu und benennt Szenen und Ordner in die gewählte Sprache um. Eigene Änderungen an den Szenen bleiben erhalten.
 
 ### 2. Variante umschalten
-Rechts die **Szenenliste** öffnen, eine Hexcrawl-Szene mit rechts anklicken und **Hexcrawl-Varianten** wählen, oder oben über der Liste auf **Varianten** klicken. Im Fenster ein Bild anklicken, dann wechselt die Szene sofort. Die Pfeiltasten blättern durch die Varianten (links, rechts) und die Szenen (hoch, runter).
+Rechts die **Szenenliste** öffnen, eine Hexcrawl-Szene mit rechts anklicken und **Hexcrawl-Varianten** wählen, oben über der Liste auf **Varianten** klicken oder den Knopf **Hexcrawl Backdrops** in der Werkzeugleiste links nehmen (eine eigene Gruppe, mit einem Werkzeug, das das Bild den Spielern zeigt). Im Fenster ein Bild anklicken, um es zu wählen. Die Pfeiltasten blättern durch die Varianten (links, rechts) und die Szenen (hoch, runter). Das Suchfeld oben findet eine Szene nach Namen oder Hexnummer (z. B. `0412`).
 
-Die Szene muss nicht geöffnet oder aktiv sein. Erst die Variante wählen, die Szene später aktivieren, und die Spieler sehen gleich das richtige Bild.
+Die Szene muss nicht geöffnet oder aktiv sein. Eine Zeile im Fenster sagt dir, was gilt: Ist die Szene aktiv, sehen die Spieler jede Änderung sofort; sonst wird das Bild gespeichert und erscheint, wenn du die Szene aktivierst. Dafür gibt es die Knöpfe **Aktivieren** und **Ansehen** (nur für dich), oder ein Doppelklick auf ein Bild wählt es und aktiviert die Szene in einem Schritt.
+
+### 3. Den Spielern ein Bild zeigen
+**Den Spielern zeigen** im Varianten-Fenster schickt das gewählte Bild als großes Bildfenster an alle Spieler. Die Szene wird nicht aktiviert, deine eigene Ansicht bleibt, wie sie ist. Das passt zum Spiel am Tisch mit Spielerbildschirm: Auf deinem Bildschirm bleibt die Übersichtskarte, die Landschaft zeigst du Hex für Hex; aktiviert wird die Szene erst, wenn Spielfiguren darauf sollen. Dasselbe geht mit `/backdrop show` und dem Makro *Bild den Spielern zeigen*.
 
 <img src="docs/screenshot-scenes-list.png" alt="Der Knopf Varianten über der Szenenliste" width="300">
 <img src="docs/screenshot-context-menu.png" alt="Rechtsklick-Menü einer Szene mit dem Eintrag Hexcrawl variants" width="170">
@@ -41,12 +44,13 @@ Die Szene muss nicht geöffnet oder aktiv sein. Erst die Variante wählen, die S
 <img src="docs/screenshot-window.png" alt="Das Varianten-Fenster mit allen Varianten einer Szene" width="700">
 
 Weitere Wege:
-- **Makro** *Bildvariante…* öffnet dasselbe Fenster. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*). Im Ordner *Hexcrawl Backdrops / Bild* liegen außerdem Schnellmakros für *Nächste Variante*, *Vorherige Variante* und jede einzelne Variante. Zieh die, die du brauchst, auf die Leiste.
+- **Makro** *Bildvariante…* öffnet dasselbe Fenster, *Bild den Spielern zeigen* teilt das Bild. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*). Im Ordner *Hexcrawl Backdrops / Bild* liegen außerdem Schnellmakros für *Nächste Variante*, *Vorherige Variante* und jede einzelne Variante. Zieh die, die du brauchst, auf die Leiste.
 - **Chat-Befehle** (nur GM; `/hcb` funktioniert als Kurzform):
 
 ```
 /backdrop                 öffnet das Varianten-Fenster für die aktuelle Szene
 /backdrop next            nächste Variante (auch: /backdrop prev)
+/backdrop show            zeigt das Bild den Spielern (Szene im Varianten-Fenster, sonst die aktuelle Szene)
 /backdrop nacht           zeigt direkt eine Variante: tag, nacht, dämmerung, regen, gewitter, nebel, winter, herbst, frühling, lager, lagerabend
 /backdrop import          öffnet den Import-Dialog
 /backdrop macros          legt fehlende Makros an und benennt vorhandene in die gewählte Sprache um
@@ -69,7 +73,7 @@ Ich habe diese Szenen für meine eigene Dolmenwood-Kampagne gemacht. Vielleicht 
 **Alle Bilder in diesem Modul sind KI-generiert.** Ich habe jedes Bild lokal auf meinem eigenen Computer mit FLUX.2 klein 4B (Black Forest Labs, Apache 2.0) erzeugt, anhand meiner eigenen schriftlichen Szenenbeschreibungen. Ich habe die Bilder ausgewählt und geprüft und, wenn eines nicht zum Ort passte, neu erzeugt oder bearbeitet. Ich habe keine offiziellen Dolmenwood-Bilder, -Karten oder -Texte als Eingabe oder Vorlage benutzt, und kein Modell wurde mit Dolmenwood-Material trainiert oder nachtrainiert. Das Modul enthält keine Musik und keine Texte aus den Büchern. Einzelheiten: LICENSE-IMAGES.md.
 
 ## Hinweise
-- Einstellungen: die Sprache der Szenennamen und der Knopf *Szenen importieren…*
+- Einstellungen: die Sprache der Szenennamen, der Knopf *Szenen importieren…* und ob der Knopf Hexcrawl Backdrops in der Werkzeugleiste links erscheint.
 - Hex-Szenen heißen nur nach ihrer Hex-Nummer. Die Feen-Szenen tragen die Namen der Feenstraßen und Feenreiche.
 - Die Szenen entstehen in der Größe ihres Bildes. Spielfiguren funktionieren wie auf jeder anderen Szene.
 

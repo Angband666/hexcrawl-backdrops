@@ -31,9 +31,12 @@ When a GM opens a world with the module for the first time, a dialog appears. Ch
 - *Update and rename* re-links the variants of imported scenes and renames scenes and folders to the chosen language. Your own changes to the scenes are kept.
 
 ### 2. Switch the variant
-Open the **Scenes** list on the right, right-click any Hexcrawl scene and choose **Hexcrawl variants**, or press the **Variants** button above the list. In the window that opens, click a picture and the scene changes at once. The arrow keys step through the variants (left, right) and the scenes (up, down).
+Open the **Scenes** list on the right, right-click any Hexcrawl scene and choose **Hexcrawl variants**, press the **Variants** button above the list, or use the **Hexcrawl Backdrops** button in the scene controls on the left (its own group; it also has a tool to show the picture to the players). In the window that opens, click a picture to choose it. The arrow keys step through the variants (left, right) and the scenes (up, down). The search field at the top finds a scene by name or hex number (e.g. `0412`).
 
-The scene does not have to be open or active. Choose the variant first, activate the scene later, and your players see the right picture right away.
+The scene does not have to be open or active. A line in the window tells you which: if the scene is active, your players see every change at once; if not, the picture is saved and shown when you activate the scene. Use the buttons **Activate** and **View** (only for you), or double-click a picture to choose it and activate the scene in one step.
+
+### 3. Show a picture to the players
+**Show to players** in the variant window sends the chosen picture to all players as a large image window. The scene is not activated and your own view stays as it is. This suits play at the table with a player screen: keep the overland map on your screen and show the landscape hex by hex; activate the scene only when you need tokens on it. The same works with `/backdrop show` and the macro *Show backdrop to players*.
 
 <img src="docs/screenshot-scenes-list.png" alt="The Variants button above the Scenes list" width="300">
 <img src="docs/screenshot-context-menu.png" alt="Right-click menu of a scene with the entry Hexcrawl variants" width="170">
@@ -41,12 +44,13 @@ The scene does not have to be open or active. Choose the variant first, activate
 <img src="docs/screenshot-window.png" alt="The variant window with all variants of one scene" width="700">
 
 More ways:
-- **Macro** *Backdrop variant…* opens the same window. It is put on your hotbar when you import (if the bar is full, it is in the macro folder *Hexcrawl Backdrops*). The folder *Hexcrawl Backdrops / Backdrop* also holds quick macros for *Next variant*, *Previous variant* and every single variant. Drag the ones you use to the hotbar.
+- **Macro** *Backdrop variant…* opens the same window, *Show backdrop to players* shares the picture. It is put on your hotbar when you import (if the bar is full, it is in the macro folder *Hexcrawl Backdrops*). The folder *Hexcrawl Backdrops / Backdrop* also holds quick macros for *Next variant*, *Previous variant* and every single variant. Drag the ones you use to the hotbar.
 - **Chat commands** (GM only; `/hcb` works as a short form):
 
 ```
 /backdrop                 opens the variant window for the current scene
 /backdrop next            next variant (also: /backdrop prev)
+/backdrop show            shows the picture to the players (scene in the variant window, else the current scene)
 /backdrop night           shows a variant directly: day, night, dusk, rain, storm, mist, winter, autumn, spring, camp, campdusk
 /backdrop import          opens the import dialog
 /backdrop macros          creates missing macros and renames existing ones to the chosen language
@@ -69,7 +73,7 @@ I made these scenes for my own Dolmenwood campaign. Other game masters may find 
 **All images in this module are AI-generated.** I made every image locally on my own computer with FLUX.2 klein 4B (Black Forest Labs, Apache 2.0), from my own written scene descriptions. I picked and checked the images and regenerated or edited them where they did not fit the place. I used no official Dolmenwood artwork, maps or text as input or reference, and no model was trained or fine-tuned on Dolmenwood material. The module contains no music and no text from the books. Details: LICENSE-IMAGES.md.
 
 ## Notes
-- Settings: the language of the scene names and the *Import scenes…* button.
+- Settings: the language of the scene names, the *Import scenes…* button and whether the Hexcrawl Backdrops button in the scene controls is shown.
 - Hex scenes are named by hex number only. Fairy scenes carry the names of the fairy roads and realms.
 - The scenes are created at the size of their image. Tokens work as on any other scene.
 
