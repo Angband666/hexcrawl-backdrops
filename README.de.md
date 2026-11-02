@@ -41,7 +41,7 @@ Die Szene muss nicht geöffnet oder aktiv sein. Eine Zeile im Fenster sagt dir, 
 <img src="docs/screenshot-scenes-list.png" alt="Der Knopf Varianten über der Szenenliste" width="300">
 <img src="docs/screenshot-context-menu.png" alt="Rechtsklick-Menü einer Szene mit dem Eintrag Hexcrawl variants" width="170">
 
-<img src="docs/screenshot-window.png" alt="Das Varianten-Fenster mit allen Varianten einer Szene" width="700">
+<img src="docs/screenshot-window.png" alt="Das Varianten-Fenster: Suchfeld, Statuszeile mit den Knöpfen Den Spielern zeigen, Ansehen und Aktivieren, und alle Varianten einer Szene" width="700">
 
 Weitere Wege:
 - **Makro** *Bildvariante…* öffnet dasselbe Fenster, *Bild den Spielern zeigen* teilt das Bild. Es wird beim Import auf deine Makroleiste gelegt (ist die Leiste voll, liegt es im Makro-Ordner *Hexcrawl Backdrops*). Im Ordner *Hexcrawl Backdrops / Bild* liegen außerdem Schnellmakros für *Nächste Variante*, *Vorherige Variante* und jede einzelne Variante. Zieh die, die du brauchst, auf die Leiste.

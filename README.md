@@ -41,7 +41,7 @@ The scene does not have to be open or active. A line in the window tells you whi
 <img src="docs/screenshot-scenes-list.png" alt="The Variants button above the Scenes list" width="300">
 <img src="docs/screenshot-context-menu.png" alt="Right-click menu of a scene with the entry Hexcrawl variants" width="170">
 
-<img src="docs/screenshot-window.png" alt="The variant window with all variants of one scene" width="700">
+<img src="docs/screenshot-window.png" alt="The variant window: search field, active state with the buttons Show to players, View and Activate, and all variants of one scene" width="700">
 
 More ways:
 - **Macro** *Backdrop variant…* opens the same window, *Show backdrop to players* shares the picture. It is put on your hotbar when you import (if the bar is full, it is in the macro folder *Hexcrawl Backdrops*). The folder *Hexcrawl Backdrops / Backdrop* also holds quick macros for *Next variant*, *Previous variant* and every single variant. Drag the ones you use to the hotbar.
